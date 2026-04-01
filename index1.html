@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
     />
     <title>Raw & Roasted Makhana | Artisanal Superfood</title>
     <!-- Google Fonts: Playfair Display + Montserrat for elegant contrast -->
@@ -36,6 +36,7 @@
         max-width: 1280px;
         margin: 0 auto;
         padding: 0 48px;
+        width: 100%;
       }
 
       /* Typography with elegant serif */
@@ -81,6 +82,7 @@
       .btn {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 12px;
         background: #c2652e;
         color: white;
@@ -94,6 +96,7 @@
         cursor: pointer;
         border: none;
         font-family: "Montserrat", sans-serif;
+        text-align: center;
       }
 
       .btn:hover {
@@ -121,6 +124,7 @@
         padding: 32px 0;
         flex-wrap: wrap;
         border-bottom: 1px solid #eee3d8;
+        gap: 20px;
       }
 
       .logo {
@@ -137,6 +141,8 @@
         display: flex;
         gap: 42px;
         list-style: none;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .nav-links a {
@@ -164,7 +170,7 @@
 
       .hero-content {
         flex: 1;
-        min-width: 300px;
+        min-width: 280px;
       }
 
       .hero-badge {
@@ -191,6 +197,7 @@
         display: flex;
         gap: 48px;
         margin-top: 40px;
+        flex-wrap: wrap;
       }
 
       .stat-item .stat-number {
@@ -211,6 +218,7 @@
         border-radius: 24px;
         object-fit: cover;
         box-shadow: 0 35px 50px -25px rgba(0, 0, 0, 0.2);
+        height: auto;
       }
 
       /* Full width editorial image section */
@@ -238,6 +246,7 @@
         color: white;
         flex-direction: column;
         backdrop-filter: brightness(0.9);
+        padding: 20px;
       }
 
       .editorial-overlay h3 {
@@ -274,6 +283,10 @@
         font-size: 1.4rem;
         margin-bottom: 12px;
         font-family: "Playfair Display", serif;
+      }
+
+      .feature-card p {
+        word-break: break-word;
       }
 
       /* Product Gallery - Different layout with imagery */
@@ -408,6 +421,10 @@
         margin-bottom: 18px;
       }
 
+      .test-card p {
+        word-break: break-word;
+      }
+
       /* CTA - Fresh design */
       .cta-block {
         background: #2c2418;
@@ -419,6 +436,7 @@
 
       .cta-block h2 {
         color: #fde9db;
+        word-break: break-word;
       }
 
       .cta-block .btn-light {
@@ -445,6 +463,102 @@
         margin-left: 28px;
         font-size: 1.3rem;
         transition: 0.2s;
+        display: inline-block;
+      }
+
+      /* ========== ENHANCED FULL MOBILE RESPONSIVENESS ========== */
+      @media (max-width: 1024px) {
+        .container {
+          padding: 0 32px;
+        }
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 2.4rem;
+        }
+        .hero-stats {
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+        .nav-links {
+          justify-content: center;
+          gap: 28px;
+        }
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 50px 0 70px;
+          gap: 40px;
+        }
+        .hero-content {
+          text-align: center;
+        }
+        .hero-description {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .stat-item {
+          text-align: center;
+        }
+        .hero-badge {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .features {
+          padding: 60px 0;
+        }
+        .features-grid {
+          gap: 30px;
+          margin-top: 40px;
+        }
+        .product-showcase {
+          padding: 60px 0;
+        }
+        .product-grid {
+          gap: 25px;
+          margin-top: 35px;
+        }
+        .nutrition-section {
+          flex-direction: column;
+          text-align: center;
+          gap: 40px;
+          padding: 40px 0;
+        }
+        .nutrition-stats-grid {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .testimonial-area {
+          padding: 60px 0;
+          margin: 30px 0;
+        }
+        .testimonial-flex {
+          margin-top: 40px;
+          gap: 25px;
+        }
+        .cta-block {
+          padding: 50px 35px;
+          margin: 40px 0 60px;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        .social-icons a {
+          margin: 0 12px;
+        }
       }
 
       @media (max-width: 850px) {
@@ -457,19 +571,331 @@
         h2 {
           font-size: 2rem;
         }
-        .hero {
-          flex-direction: column;
-        }
-        .navbar {
-          flex-direction: column;
-          gap: 20px;
-        }
         .editorial-section {
           height: 350px;
           background-attachment: scroll;
         }
         .cta-block {
           padding: 48px 28px;
+        }
+        .editorial-overlay h3 {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 20px;
+        }
+        h1 {
+          font-size: 2.4rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+        }
+        .section-subhead {
+          font-size: 1rem;
+        }
+        .hero {
+          padding: 40px 0 50px;
+          gap: 32px;
+        }
+        .hero-badge {
+          font-size: 0.7rem;
+          padding: 5px 14px;
+          margin-bottom: 20px;
+        }
+        .hero-description {
+          font-size: 0.95rem;
+          margin: 20px 0 28px;
+        }
+        .hero-stats {
+          gap: 28px;
+          margin-top: 28px;
+        }
+        .stat-item .stat-number {
+          font-size: 1.6rem;
+        }
+        .hero-image img {
+          border-radius: 20px;
+        }
+        .features {
+          padding: 50px 0;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 32px;
+        }
+        .feature-card {
+          padding: 16px;
+        }
+        .feature-icon {
+          font-size: 2rem;
+        }
+        .feature-card h3 {
+          font-size: 1.3rem;
+        }
+        .product-showcase {
+          padding: 50px 0;
+          margin: 20px 0;
+        }
+        .product-grid {
+          gap: 24px;
+          margin-top: 30px;
+        }
+        .product-item {
+          min-width: 100%;
+        }
+        .product-image {
+          height: 260px;
+        }
+        .product-info {
+          padding: 22px;
+        }
+        .product-info h3 {
+          font-size: 1.4rem !important;
+        }
+        .nutrition-stats-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-top: 28px;
+        }
+        .stat-circle {
+          padding: 20px;
+        }
+        .stat-circle .big-number {
+          font-size: 2rem;
+        }
+        .testimonial-area {
+          padding: 50px 0;
+        }
+        .testimonial-flex {
+          gap: 24px;
+          margin-top: 32px;
+        }
+        .test-card {
+          padding: 28px;
+        }
+        .test-card i.fa-quote-left {
+          font-size: 1.6rem;
+        }
+        .cta-block {
+          padding: 40px 24px;
+          border-radius: 36px;
+          margin: 30px 0 50px;
+        }
+        .cta-block h2 {
+          font-size: 1.6rem;
+          margin-bottom: 16px;
+        }
+        .cta-block p {
+          font-size: 0.95rem;
+          margin-bottom: 24px;
+        }
+        .btn {
+          padding: 12px 28px;
+          font-size: 0.9rem;
+        }
+        footer {
+          padding: 40px 0 30px;
+          gap: 20px;
+        }
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 0 18px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .navbar {
+          padding: 24px 0;
+        }
+        .nav-links {
+          gap: 20px;
+        }
+        .nav-links a {
+          font-size: 0.8rem;
+        }
+        .hero-stats {
+          gap: 20px;
+        }
+        .stat-item .stat-number {
+          font-size: 1.4rem;
+        }
+        .stat-item div:last-child {
+          font-size: 0.8rem;
+        }
+        .editorial-section {
+          height: 280px;
+          margin: 20px 0 40px;
+        }
+        .editorial-overlay h3 {
+          font-size: 1.8rem;
+        }
+        .editorial-overlay p {
+          font-size: 0.9rem !important;
+        }
+        .product-image {
+          height: 220px;
+        }
+        .product-info {
+          padding: 18px;
+        }
+        .product-tag {
+          font-size: 0.65rem;
+        }
+        .test-card {
+          padding: 22px;
+        }
+        .cta-block {
+          padding: 32px 20px;
+          border-radius: 28px;
+        }
+        .cta-block h2 {
+          font-size: 1.4rem;
+        }
+        .btn {
+          padding: 10px 24px;
+          font-size: 0.85rem;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 16px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.4rem;
+        }
+        .hero {
+          padding: 30px 0 40px;
+        }
+        .hero-badge {
+          font-size: 0.65rem;
+          padding: 4px 12px;
+        }
+        .hero-description {
+          font-size: 0.85rem;
+          margin: 16px 0 20px;
+        }
+        .hero-stats {
+          gap: 16px;
+          flex-direction: column;
+          align-items: center;
+        }
+        .stat-item {
+          text-align: center;
+        }
+        .nav-links {
+          gap: 16px;
+        }
+        .nav-links a {
+          font-size: 0.75rem;
+        }
+        .logo {
+          font-size: 1.3rem;
+        }
+        .features-grid {
+          gap: 20px;
+        }
+        .feature-card h3 {
+          font-size: 1.2rem;
+        }
+        .feature-card p {
+          font-size: 0.85rem;
+        }
+        .product-info h3 {
+          font-size: 1.2rem !important;
+        }
+        .product-info p {
+          font-size: 0.85rem;
+        }
+        .nutrition-content h2 {
+          font-size: 1.4rem;
+        }
+        .nutrition-content p {
+          font-size: 0.85rem;
+        }
+        .stat-circle .big-number {
+          font-size: 1.6rem;
+        }
+        .stat-circle div:last-child {
+          font-size: 0.8rem;
+        }
+        .testimonial-flex {
+          gap: 20px;
+        }
+        .test-card p {
+          font-size: 0.85rem;
+        }
+        .cta-block h2 {
+          font-size: 1.3rem;
+        }
+        .cta-block p {
+          font-size: 0.85rem;
+        }
+        .social-icons a {
+          font-size: 1.1rem;
+          margin: 0 10px;
+        }
+        footer p {
+          font-size: 0.75rem;
+        }
+      }
+
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 1.6rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        .nav-links {
+          gap: 12px;
+        }
+        .nav-links a {
+          font-size: 0.7rem;
+        }
+        .logo {
+          font-size: 1.2rem;
+        }
+        .btn {
+          padding: 8px 20px;
+          font-size: 0.8rem;
+        }
+        .product-image {
+          height: 180px;
+        }
+        .editorial-overlay h3 {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Touch-friendly adjustments for mobile */
+      @media (hover: none) and (pointer: coarse) {
+        .btn:hover,
+        .product-item:hover,
+        .btn-outline:hover {
+          transform: none;
+        }
+        .btn:active {
+          transform: scale(0.98);
+        }
+        .product-item:active {
+          transform: scale(0.99);
         }
       }
     </style>
