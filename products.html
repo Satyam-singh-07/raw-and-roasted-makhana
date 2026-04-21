@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
+    />
+    <title>Our Collection | Raw & Roasted Makhana</title>
+    <!-- Google Fonts: Playfair Display + Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Global Style -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary: #4B2E4A;
+        --primary-light: #6A4A67;
+        --accent: #C9A46C;
+        --accent-light: #E6D3A3;
+        --background: #F5F1E8;
+        --section-bg: #D8D2C8;
+        --text-dark: #3A2F2A;
+        --text-light: #5A4A45;
+        --natural: #6E7F5E;
+        --natural-light: #8A9A7B;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--background);
+        color: var(--text-light);
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 48px;
+        width: 100%;
+      }
+
+      h1, h2, h3, .logo {
+        font-family: "Playfair Display", serif;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+      }
+
+      h1 span {
+        color: var(--primary);
+      }
+
+      .products-hero {
+        padding: 100px 0 60px;
+        text-align: center;
+        background: var(--section-bg);
+        margin-bottom: 60px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        padding: 60px 0;
+      }
+
+      .product-card {
+        background: var(--background);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+      }
+
+      .product-image {
+        height: 280px;
+        background: var(--section-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: var(--accent);
+        color: var(--text-dark);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-content {
+        padding: 24px;
+      }
+
+      .product-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 8px;
+      }
+
+      .product-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text-light);
+        margin-bottom: 16px;
+      }
+
+      .product-price {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .product-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .feature-tag {
+        background: var(--natural-light);
+        color: var(--natural);
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: var(--primary);
+        color: var(--background);
+        font-weight: 600;
+        padding: 14px 24px;
+        border-radius: 0px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        width: 100%;
+      }
+
+      .btn:hover {
+        background: var(--primary-light);
+        transform: translateY(-2px);
+      }
+
+      .products-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+
+      .products-intro h2 {
+        font-size: 2.2rem;
+        color: var(--text-dark);
+        margin-bottom: 16px;
+      }
+
+      .products-intro p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--text-light);
+      }
+
+      @media (max-width: 768px) {
+        .products-hero {
+          padding: 60px 0 40px;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding: 40px 0;
+        }
+
+        .product-image {
+          height: 240px;
+        }
+
+        .product-content {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+      <div class="container">
+        <h1>Our <span>Collection</span></h1>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
+          Discover the finest selection of premium makhana, carefully sourced and roasted to perfection.
+        </p>
+      </div>
+    </section>
+
+    <!-- Products Intro -->
+    <div class="container">
+      <div class="products-intro">
+        <h2>Premium Makhana Varieties</h2>
+        <p>Each variety is hand-selected from our trusted farmers in Mithila, ensuring the highest quality and nutritional value. From raw to roasted, we offer options for every taste and lifestyle.</p>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="container">
+      <div class="products-grid">
+        <!-- Raw Makhana -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Raw Makhana">
+            <div class="product-badge">Premium</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Raw Makhana</h3>
+            <p class="product-description">Pure, unroasted fox nuts in their natural state. Perfect for those seeking maximum nutrition and versatility in cooking.</p>
+            <div class="product-features">
+              <span class="feature-tag">100% Natural</span>
+              <span class="feature-tag">High Protein</span>
+              <span class="feature-tag">Gluten Free</span>
+            </div>
+            <div class="product-price">₹450 / 500g</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Roasted Makhana -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Roasted Makhana">
+            <div class="product-badge">Bestseller</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Classic Roasted</h3>
+            <p class="product-description">Traditionally roasted to bring out the natural crunch and flavor. Our signature product loved by health enthusiasts worldwide.</p>
+            <div class="product-features">
+              <span class="feature-tag">Low Calorie</span>
+              <span class="feature-tag">Antioxidant Rich</span>
+              <span class="feature-tag">Ready to Eat</span>
+            </div>
+            <div class="product-price">₹520 / 500g</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Salted Roasted -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Salted Roasted Makhana">
+            <div class="product-badge">Popular</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Salted Roasted</h3>
+            <p class="product-description">Lightly seasoned with Himalayan pink salt for that perfect savory crunch. Ideal for snacking or as a topping.</p>
+            <div class="product-features">
+              <span class="feature-tag">Himalayan Salt</span>
+              <span class="feature-tag">Savory Flavor</span>
+              <span class="feature-tag">Perfect Snack</span>
+            </div>
+            <div class="product-price">₹550 / 500g</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Pepper Roasted -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Pepper Roasted Makhana">
+            <div class="product-badge">Spicy</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Black Pepper Roasted</h3>
+            <p class="product-description">Infused with freshly ground black pepper for a spicy kick. A unique twist on traditional makhana.</p>
+            <div class="product-features">
+              <span class="feature-tag">Spicy</span>
+              <span class="feature-tag">Digestive Health</span>
+              <span class="feature-tag">Unique Flavor</span>
+            </div>
+            <div class="product-price">₹580 / 500g</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Honey Roasted -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Honey Roasted Makhana">
+            <div class="product-badge">Sweet</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Honey Roasted</h3>
+            <p class="product-description">Gently roasted with pure honey for a naturally sweet treat. Perfect for kids and those with a sweet tooth.</p>
+            <div class="product-features">
+              <span class="feature-tag">Natural Sweet</span>
+              <span class="feature-tag">Kid Friendly</span>
+              <span class="feature-tag">Energy Boost</span>
+            </div>
+            <div class="product-price">₹600 / 500g</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Premium Mix -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.pexels.com/photos/5945846/pexels-photo-5945846.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Premium Mix">
+            <div class="product-badge">Assorted</div>
+          </div>
+          <div class="product-content">
+            <h3 class="product-title">Premium Gift Box</h3>
+            <p class="product-description">A curated selection of our finest varieties in one beautiful gift box. Perfect for gifting or trying multiple flavors.</p>
+            <div class="product-features">
+              <span class="feature-tag">Gift Ready</span>
+              <span class="feature-tag">Mixed Flavors</span>
+              <span class="feature-tag">Premium Packaging</span>
+            </div>
+            <div class="product-price">₹1,200 / 1kg</div>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      function loadHTML(id, url) {
+        fetch(url)
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById(id).innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading HTML:', error);
+          });
+      }
+
+      loadHTML('header-placeholder', 'header.html');
+      loadHTML('footer-placeholder', 'footer.html');
+
+      // Smooth scroll with event delegation
+      document.addEventListener("click", function (e) {
+        const anchor = e.target.closest('a');
+        if (!anchor) return;
+
+        const href = anchor.getAttribute("href");
+        if (!href) return;
+
+        // Check if it's a hash link for the index page or current page
+        if (href.startsWith("#") || href.startsWith("index.html#")) {
+          const id = href.includes("#") ? href.split("#")[1] : null;
+          if (!id) return;
+
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
