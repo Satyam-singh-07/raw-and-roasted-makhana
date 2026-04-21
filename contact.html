@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
+    />
+    <title>Contact Us | Raw & Roasted Makhana</title>
+    <!-- Google Fonts: Playfair Display + Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Global Style -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary: #4B2E4A;
+        --primary-light: #6A4A67;
+        --accent: #C9A46C;
+        --accent-light: #E6D3A3;
+        --background: #F5F1E8;
+        --section-bg: #D8D2C8;
+        --text-dark: #3A2F2A;
+        --text-light: #5A4A45;
+        --natural: #6E7F5E;
+        --natural-light: #8A9A7B;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--background);
+        color: var(--text-light);
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 48px;
+        width: 100%;
+      }
+
+      h1, h2, h3, .logo {
+        font-family: "Playfair Display", serif;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+      }
+
+      h1 span {
+        color: var(--primary);
+      }
+
+      .contact-hero {
+        padding: 100px 0 60px;
+        text-align: center;
+        background: var(--section-bg);
+        margin-bottom: 60px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+        padding: 60px 0;
+      }
+
+      .contact-form {
+        background: var(--background);
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      .contact-form h2 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+        color: var(--text-dark);
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid var(--section-bg);
+        border-radius: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .contact-info {
+        padding: 40px;
+        background: var(--section-bg);
+        border-radius: 16px;
+      }
+
+      .contact-info h2 {
+        font-size: 2.5rem;
+        margin-bottom: 32px;
+        color: var(--text-dark);
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .info-item i {
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin-top: 4px;
+      }
+
+      .info-item h3 {
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+      }
+
+      .info-item p {
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: var(--primary);
+        color: var(--background);
+        font-weight: 600;
+        padding: 14px 34px;
+        border-radius: 0px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+      }
+
+      .btn:hover {
+        background: var(--primary-light);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .contact-hero {
+          padding: 60px 0 40px;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+        }
+
+        .contact-form,
+        .contact-info {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Get in <span>Touch</span></h1>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
+          We'd love to hear from you. Reach out for inquiries, partnerships, or just to say hello.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <div class="container">
+      <section class="contact-grid">
+        <div class="contact-form">
+          <h2>Send us a Message</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Our Location</h3>
+              <p>Mithila Region, Bihar, India<br>
+              Serving worldwide through our partners</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>hello@rawandroasted.com<br>
+              partnerships@rawandroasted.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+91 12345 67890<br>
+              Mon-Fri: 9AM - 6PM IST</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+              Saturday: 10:00 AM - 4:00 PM<br>
+              Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      function loadHTML(id, url) {
+        fetch(url)
+          .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById(id).innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading HTML:', error);
+          });
+      }
+
+      loadHTML('header-placeholder', 'header.html');
+      loadHTML('footer-placeholder', 'footer.html');
+
+      // Smooth scroll with event delegation
+      document.addEventListener("click", function (e) {
+        const anchor = e.target.closest('a');
+        if (!anchor) return;
+
+        const href = anchor.getAttribute("href");
+        if (!href) return;
+
+        // Check if it's a hash link for the index page or current page
+        if (href.startsWith("#") || href.startsWith("index.html#")) {
+          const id = href.includes("#") ? href.split("#")[1] : null;
+          if (!id) return;
+
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

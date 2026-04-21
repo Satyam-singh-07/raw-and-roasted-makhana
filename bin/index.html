@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes"
+    />
+    <title>Raw & Roasted Makhana | Pure Superfood Snacking</title>
+    <!-- Google Fonts: Modern, clean sans-serif -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 (free icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fefaf5;
+        color: #2c241a;
+        scroll-behavior: smooth;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 32px;
+        width: 100%;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: 3.8rem;
+        line-height: 1.2;
+        background: linear-gradient(135deg, #b95c1e, #7a3e0f);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #3b2a1f;
+      }
+
+      .section-subhead {
+        font-size: 1.2rem;
+        color: #6b4c2c;
+        max-width: 700px;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #d9692e;
+        color: white;
+        font-weight: 600;
+        padding: 14px 32px;
+        border-radius: 60px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 8px 18px rgba(185, 92, 30, 0.2);
+        text-align: center;
+      }
+
+      .btn i {
+        font-size: 1.1rem;
+      }
+
+      .btn:hover {
+        background: #b44d1a;
+        transform: translateY(-3px);
+        box-shadow: 0 14px 24px rgba(185, 92, 30, 0.25);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid #d9692e;
+        color: #d9692e;
+        box-shadow: none;
+      }
+
+      .btn-outline:hover {
+        background: #d9692e;
+        color: white;
+      }
+
+      /* Header / Nav */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .logo span:first-child {
+        color: #c95f24;
+      }
+
+      .logo span:last-child {
+        color: #4c351c;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #4a3520;
+        transition: color 0.2s;
+        white-space: nowrap;
+      }
+
+      .nav-links a:hover {
+        color: #d9692e;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 48px;
+        padding: 40px 0 70px 0;
+      }
+
+      .hero-content {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .hero-badge {
+        background: #fae6db;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #b74f1c;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+      }
+
+      .hero-description {
+        font-size: 1.2rem;
+        color: #4f3a28;
+        margin: 24px 0 32px;
+        max-width: 550px;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: left;
+      }
+
+      .stat-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #b7571f;
+      }
+
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero-image img {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 48px;
+        object-fit: cover;
+        box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease;
+        height: auto;
+      }
+
+      /* Features Grid */
+      .features {
+        padding: 80px 0;
+        background: #ffffff;
+        border-radius: 64px 64px 0 0;
+        margin-top: 20px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 40px;
+        margin-top: 48px;
+      }
+
+      .feature-card {
+        background: #fffaf5;
+        padding: 32px 24px;
+        border-radius: 32px;
+        transition: all 0.3s;
+        text-align: center;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+        border: 1px solid #f2e3d8;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: #e7cbbc;
+        box-shadow: 0 20px 30px -12px rgba(110, 50, 10, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        background: #f1e2d6;
+        width: 80px;
+        height: 80px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-bottom: 24px;
+        color: #b7571f;
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+      }
+
+      .feature-card p {
+        word-break: break-word;
+      }
+
+      /* product showcase (raw & roasted) */
+      .showcase {
+        padding: 80px 0;
+        background: #fefaf5;
+      }
+
+      .product-duo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+        margin-top: 48px;
+      }
+
+      .product-card {
+        flex: 1;
+        min-width: 280px;
+        background: white;
+        border-radius: 48px;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f1e2d4;
+      }
+
+      .product-img {
+        height: 280px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .raw-img {
+        background-image: url("https://placehold.co/600x400/f9ede3/c96f32?text=Raw+Makhana");
+      }
+      .roasted-img {
+        background-image: url("https://placehold.co/600x400/eedbcb/c45a1c?text=Roasted+Makhana");
+      }
+      .product-img {
+        background: linear-gradient(125deg, #f7e3d4, #f3d9c6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: #b6531d;
+      }
+
+      .product-info {
+        padding: 32px;
+      }
+
+      .product-info h3 {
+        font-size: 1.9rem;
+        word-break: break-word;
+      }
+
+      .tag {
+        display: inline-block;
+        background: #ffe0cf;
+        padding: 5px 14px;
+        border-radius: 60px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #a54412;
+      }
+
+      /* Nutrition section */
+      .nutrition {
+        background: #fff3ea;
+        padding: 80px 0;
+        border-radius: 48px;
+        margin: 30px 0;
+      }
+
+      .nutrition-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .nutrition-text {
+        flex: 1;
+        min-width: 260px;
+      }
+
+      .nutrition-text ul li {
+        margin-bottom: 12px;
+        word-break: break-word;
+      }
+
+      .nutrition-stats {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 28px;
+      }
+
+      .nutri-item {
+        background: white;
+        border-radius: 28px;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      }
+
+      .nutri-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #b7571f;
+        word-break: break-word;
+      }
+
+      /* testimonials */
+      .testimonials {
+        padding: 80px 0;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin-top: 48px;
+      }
+
+      .testimonial {
+        background: white;
+        border-radius: 32px;
+        padding: 32px;
+        box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f0e0d2;
+      }
+
+      .stars {
+        color: #f4b436;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      .testimonial p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: #2d241b;
+        word-break: break-word;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .user-avatar {
+        background: #e7cdb9;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #884f28;
+        flex-shrink: 0;
+      }
+
+      /* CTA section */
+      .cta {
+        background: linear-gradient(115deg, #2f241b, #1f1710);
+        border-radius: 56px;
+        padding: 64px 48px;
+        text-align: center;
+        margin: 40px 0 80px;
+        color: white;
+      }
+
+      .cta h2 {
+        color: #ffeedd;
+        word-break: break-word;
+      }
+
+      .cta p {
+        margin-bottom: 32px;
+        font-size: 1.1rem;
+        opacity: 0.9;
+        word-break: break-word;
+      }
+
+      .btn-light {
+        background: #f7b27a;
+        color: #2c1c10;
+        box-shadow: none;
+      }
+
+      .btn-light:hover {
+        background: #ffcd9a;
+        transform: scale(1.02);
+      }
+
+      /* footer */
+      footer {
+        padding: 48px 0 32px;
+        border-top: 1px solid #eedbcb;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 0.9rem;
+        color: #5b4532;
+      }
+
+      .social-icons a {
+        color: #936e4b;
+        margin-left: 20px;
+        font-size: 1.3rem;
+        transition: color 0.2s;
+        display: inline-block;
+      }
+
+      .social-icons a:hover {
+        color: #d9692e;
+      }
+
+      /* ========== ENHANCED MOBILE RESPONSIVENESS ========== */
+      @media (max-width: 1024px) {
+        .container {
+          padding: 0 28px;
+        }
+        h1 {
+          font-size: 3.2rem;
+        }
+        h2 {
+          font-size: 2.2rem;
+        }
+        .hero-stats {
+          gap: 24px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+        .nav-links {
+          justify-content: center;
+          gap: 28px;
+        }
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px 0 50px;
+        }
+        .hero-content {
+          text-align: center;
+        }
+        .hero-description {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .stat-item {
+          text-align: center;
+        }
+        .hero-badge {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .features {
+          padding: 60px 0;
+        }
+        .features-grid {
+          gap: 30px;
+        }
+        .showcase {
+          padding: 60px 0;
+        }
+        .product-info {
+          padding: 24px;
+        }
+        .product-info h3 {
+          font-size: 1.6rem;
+        }
+        .nutrition {
+          padding: 60px 0;
+        }
+        .nutrition-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+        .nutrition-text ul {
+          text-align: left;
+          display: inline-block;
+        }
+        .testimonials {
+          padding: 60px 0;
+        }
+        .cta {
+          padding: 48px 28px;
+          margin: 30px 0 60px;
+        }
+        .cta h2 {
+          font-size: 1.8rem;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        .social-icons a {
+          margin: 0 12px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 20px;
+        }
+        h1 {
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+        }
+        .section-subhead {
+          font-size: 1rem;
+          margin-bottom: 1.8rem;
+        }
+        .hero-badge {
+          font-size: 0.75rem;
+          padding: 5px 14px;
+        }
+        .hero-description {
+          font-size: 1rem;
+          margin: 20px 0 24px;
+        }
+        .hero-stats {
+          gap: 20px;
+          margin-top: 24px;
+        }
+        .stat-number {
+          font-size: 1.5rem;
+        }
+        .hero-image img {
+          border-radius: 32px;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 32px;
+        }
+        .feature-card {
+          padding: 28px 20px;
+        }
+        .feature-icon {
+          width: 70px;
+          height: 70px;
+          font-size: 2rem;
+        }
+        .feature-card h3 {
+          font-size: 1.3rem;
+        }
+        .product-duo {
+          gap: 32px;
+          margin-top: 32px;
+        }
+        .product-card {
+          min-width: 100%;
+        }
+        .product-img {
+          height: 220px;
+          font-size: 3.5rem;
+        }
+        .product-info {
+          padding: 20px;
+        }
+        .product-info h3 {
+          font-size: 1.5rem;
+        }
+        .nutrition-stats {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .nutri-item {
+          padding: 20px;
+        }
+        .nutri-number {
+          font-size: 1.6rem;
+        }
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 32px;
+        }
+        .testimonial {
+          padding: 24px;
+        }
+        .btn {
+          padding: 12px 28px;
+          font-size: 0.9rem;
+        }
+        .btn-outline {
+          padding: 10px 20px !important;
+        }
+        .cta {
+          padding: 40px 24px;
+          border-radius: 40px;
+        }
+        .cta p {
+          font-size: 1rem;
+          margin-bottom: 24px;
+        }
+        footer {
+          padding: 32px 0 24px;
+          gap: 16px;
+        }
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 16px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .navbar {
+          padding: 16px 0;
+        }
+        .nav-links {
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+        .nav-links a {
+          font-size: 0.85rem;
+          white-space: normal;
+        }
+        .hero {
+          padding: 20px 0 40px;
+          gap: 32px;
+        }
+        .hero-badge {
+          font-size: 0.7rem;
+          margin-bottom: 16px;
+        }
+        .hero-description {
+          font-size: 0.9rem;
+          margin: 16px 0 20px;
+        }
+        .hero-stats {
+          gap: 16px;
+        }
+        .stat-number {
+          font-size: 1.3rem;
+        }
+        .stat-item div:last-child {
+          font-size: 0.8rem;
+        }
+        .features {
+          padding: 40px 0;
+          border-radius: 32px 32px 0 0;
+        }
+        .features-grid {
+          margin-top: 24px;
+          gap: 20px;
+        }
+        .feature-card {
+          padding: 24px 16px;
+        }
+        .showcase {
+          padding: 40px 0;
+        }
+        .product-duo {
+          gap: 24px;
+          margin-top: 24px;
+        }
+        .product-img {
+          height: 180px;
+          font-size: 2.8rem;
+        }
+        .product-info {
+          padding: 18px;
+        }
+        .product-info h3 {
+          font-size: 1.3rem;
+        }
+        .tag {
+          font-size: 0.7rem;
+          padding: 4px 12px;
+        }
+        .nutrition {
+          padding: 40px 0;
+          border-radius: 32px;
+          margin: 20px 0;
+        }
+        .nutrition-text ul li {
+          font-size: 0.85rem;
+          margin-bottom: 8px;
+        }
+        .testimonials {
+          padding: 40px 0;
+        }
+        .testimonial {
+          padding: 20px;
+        }
+        .testimonial p {
+          font-size: 0.9rem;
+        }
+        .stars {
+          font-size: 0.8rem;
+          margin-bottom: 12px;
+        }
+        .cta {
+          padding: 32px 20px;
+          margin: 20px 0 40px;
+          border-radius: 32px;
+        }
+        .cta h2 {
+          font-size: 1.5rem;
+        }
+        .cta p {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+        }
+        .btn {
+          padding: 10px 24px;
+          font-size: 0.85rem;
+          gap: 8px;
+        }
+        .btn i {
+          font-size: 0.9rem;
+        }
+        footer {
+          padding: 24px 0 20px;
+        }
+        .social-icons a {
+          font-size: 1.1rem;
+          margin: 0 10px;
+        }
+      }
+
+      /* Fix for very small devices */
+      @media (max-width: 360px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        .nav-links {
+          gap: 14px;
+        }
+        .nav-links a {
+          font-size: 0.75rem;
+        }
+        .logo {
+          font-size: 1.3rem;
+        }
+        .hero-stats {
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+        }
+        .stat-item {
+          text-align: center;
+        }
+        .product-info h3 {
+          font-size: 1.2rem;
+        }
+        .btn {
+          padding: 8px 20px;
+        }
+      }
+
+      /* Touch-friendly adjustments */
+      @media (hover: none) and (pointer: coarse) {
+        .btn:hover,
+        .feature-card:hover,
+        .product-card:hover {
+          transform: none;
+        }
+        .btn:active {
+          transform: scale(0.98);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="logo"><span>🌾 Raw & </span><span>Roasted</span></div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Makhana</a></li>
+          <li><a href="#nutrition">Nutrition</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li>
+            <a
+              href="#"
+              class="btn-outline"
+              style="padding: 8px 20px; border-radius: 40px"
+              >Shop</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Hero section -->
+      <div class="container" id="home">
+        <div class="hero">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <i class="fas fa-seedling"></i> 100% natural · guilt-free crunch
+            </div>
+            <h1>Crunch into purity:<br />Raw & Roasted Makhana</h1>
+            <p class="hero-description">
+              Superfood from the Himalayas — ethically sourced, gently roasted
+              or left raw to preserve nature’s best. High protein, gluten-free,
+              and crafted for pure delight.
+            </p>
+            <a href="#" class="btn"
+              ><i class="fas fa-shopping-bag"></i> Explore flavors</a
+            >
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div>Natural</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5x</div>
+                <div>More Fiber</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">0g</div>
+                <div>Trans Fat</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://placehold.co/600x500/f2e1d4/c55f28?text=✨+Premium+Makhana+✨"
+              alt="Raw and Roasted Makhana bowl"
+              style="background: #f2e1d4"
+            />
+            <!-- modern visual representation -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Features / benefits -->
+      <div class="features">
+        <div class="container">
+          <h2 style="text-align: center">
+            Why Makhana is the next-gen super snack
+          </h2>
+          <p
+            style="
+              text-align: center;
+              max-width: 700px;
+              margin: 0 auto 20px;
+              color: #7a5a40;
+            "
+          >
+            Light, airy, and loaded with antioxidants — the smarter choice for
+            every moment.
+          </p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+              <h3>Heart Healthy</h3>
+              <p>
+                Low sodium, rich in magnesium & potassium — supports
+                cardiovascular wellness.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
+              <h3>Antioxidant Rich</h3>
+              <p>
+                Natural flavonoids combat oxidative stress and promote youthful
+                skin.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-weight-hanging"></i>
+              </div>
+              <h3>Weight Management</h3>
+              <p>
+                High volume, low calories — keeps you full without the guilt.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+              <h3>Gluten-Free</h3>
+              <p>
+                Perfect for celiac & clean eaters, plant-based protein power.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RAW & ROASTED product showcase -->
+      <div class="container" id="products">
+        <div class="showcase">
+          <h2 style="text-align: center">Raw · Roasted · Remarkable</h2>
+          <p
+            class="section-subhead"
+            style="text-align: center; margin-left: auto; margin-right: auto"
+          >
+            Two textures, endless possibilities. Choose your crunch.
+          </p>
+          <div class="product-duo">
+            <!-- Raw Makhana -->
+            <div class="product-card">
+              <div class="product-img raw-img">
+                <i
+                  class="fas fa-snowflake"
+                  style="font-size: 4rem; opacity: 0.8"
+                ></i>
+              </div>
+              <div class="product-info">
+                <span class="tag"><i class="fas fa-leaf"></i> 100% Raw</span>
+                <h3>Raw Makhana</h3>
+                <p>
+                  Unroasted, unsalted — naturally sweet undertone. Perfect for
+                  smoothie bowls, milk puddings, or as a blank canvas for your
+                  own seasoning. Packed with intact enzymes.
+                </p>
+                <div style="margin-top: 20px">
+                  <strong>Best for:</strong> Traditional recipes, overnight
+                  soaking, or creative cooking.
+                </div>
+                <a
+                  href="#"
+                  class="btn-outline"
+                  style="
+                    display: inline-block;
+                    margin-top: 24px;
+                    padding: 10px 24px;
+                  "
+                  >Shop Raw →</a
+                >
+              </div>
+            </div>
+            <!-- Roasted Makhana -->
+            <div class="product-card">
+              <div class="product-img roasted-img">
+                <i
+                  class="fas fa-fire"
+                  style="font-size: 4rem; opacity: 0.8"
+                ></i>
+              </div>
+              <div class="product-info">
+                <span class="tag"
+                  ><i class="fas fa-star"></i> Signature Roasted</span
+                >
+                <h3>Roasted Makhana</h3>
+                <p>
+                  Gently air-roasted with a pinch of Himalayan pink salt or
+                  classic peri-peri. Buttery, crisp and ready-to-eat. No deep
+                  frying — just wholesome crunch in every bite.
+                </p>
+                <div style="margin-top: 20px">
+                  <strong>Flavors:</strong> Sea Salt, Tangy Tomato, Smoked
+                  Paprika, Classic Butter.
+                </div>
+                <a
+                  href="#"
+                  class="btn-outline"
+                  style="
+                    display: inline-block;
+                    margin-top: 24px;
+                    padding: 10px 24px;
+                  "
+                  >Discover Flavors →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrition & Science -->
+      <div class="container" id="nutrition">
+        <div class="nutrition">
+          <div class="nutrition-grid">
+            <div class="nutrition-text">
+              <h2>Fuel your body with clean nutrition</h2>
+              <p>
+                Makhana (foxnut) is a traditional superfood now backed by modern
+                science. Rich in protein, calcium, and low glycemic index — it’s
+                the ultimate smart snack.
+              </p>
+              <ul style="margin-top: 20px; list-style: none">
+                <li>
+                  <i class="fas fa-check-circle" style="color: #c95f24"></i> ✅
+                  High in protein (10-12g per 100g)
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #c95f24"></i> ✅
+                  Natural calcium for bone strength
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #c95f24"></i> ✅
+                  Low glycemic index: diabetic-friendly
+                </li>
+                <li>
+                  <i class="fas fa-check-circle" style="color: #c95f24"></i> ✅
+                  Rich in iron and zinc
+                </li>
+              </ul>
+            </div>
+            <div class="nutrition-stats">
+              <div class="nutri-item">
+                <div class="nutri-number">~350 kcal</div>
+                <div>Per 100g (light & filling)</div>
+              </div>
+              <div class="nutri-item">
+                <div class="nutri-number">14g fiber</div>
+                <div>Per serving boost digestion</div>
+              </div>
+              <div class="nutri-item">
+                <div class="nutri-number">0 mg</div>
+                <div>Cholesterol</div>
+              </div>
+              <div class="nutri-item">
+                <div class="nutri-number">9+</div>
+                <div>Essential minerals</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials / social proof -->
+      <div class="container" id="reviews">
+        <div class="testimonials">
+          <h2 style="text-align: center">Loved by mindful snackers</h2>
+          <p
+            class="section-subhead"
+            style="text-align: center; margin-bottom: 0"
+          >
+            Join thousands who made the switch to clean, crispy goodness.
+          </p>
+          <div class="testimonial-grid">
+            <div class="testimonial">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Finally a snack that doesn’t feel heavy! The roasted makhana
+                with peri-peri is addictive yet healthy. I replaced my evening
+                chips with this."
+              </p>
+              <div class="user">
+                <div class="user-avatar"><i class="fas fa-user"></i></div>
+                <span>— Anjali M.</span>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Raw makhana is a game-changer for my morning cereal & kheer. My
+                kids love it, and I feel great knowing it’s pure and
+                chemical-free. Premium quality!"
+              </p>
+              <div class="user">
+                <div class="user-avatar"><i class="fas fa-user"></i></div>
+                <span>— Rahul S.</span>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>
+                "Perfect post-workout snack. Light, crunchy, and rich in plant
+                protein. I’ve recommended it to my entire fitness circle. Keep
+                up the ethical sourcing."
+              </p>
+              <div class="user">
+                <div class="user-avatar"><i class="fas fa-user"></i></div>
+                <span>— Priya K.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to action -->
+      <div class="container">
+        <div class="cta">
+          <h2>Experience the crunch of purity</h2>
+          <p>
+            Get 15% off your first order + free shipping on all combo packs. Raw
+            or roasted — find your match.
+          </p>
+          <a href="#" class="btn btn-light"
+            ><i class="fas fa-gift"></i> Claim your welcome offer</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <div>
+        <div class="logo" style="font-size: 1.4rem">
+          🌱 Raw & Roasted Makhana
+        </div>
+        <p style="margin-top: 8px">
+          © 2025 • Wholesome superfoods from nature’s harvest
+        </p>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+
+    <!-- subtle smooth scroll effect for anchor links -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId === "#" || targetId === "") return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
