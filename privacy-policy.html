@@ -19,6 +19,7 @@
     />
     <!-- Global Style -->
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
     <style>
       :root {
         --primary: #4B2E4A;
@@ -41,8 +42,8 @@
 
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: var(--background);
-        color: var(--text-light);
+        background-color: var(--light);
+        color: var(--dark);
         scroll-behavior: smooth;
         overflow-x: hidden;
       }
@@ -60,7 +61,7 @@
 
       h1 {
         font-size: 3.5rem;
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 1.5rem;
       }
 
@@ -71,7 +72,7 @@
       .legal-hero {
         padding: 100px 0 60px;
         text-align: center;
-        background: var(--section-bg);
+        background: var(--secondary);
         margin-bottom: 60px;
       }
 
@@ -87,7 +88,7 @@
 
       .legal-section h2 {
         font-size: 2.5rem;
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 32px;
         border-bottom: 2px solid var(--accent);
         padding-bottom: 16px;
@@ -95,7 +96,7 @@
 
       .legal-section h3 {
         font-size: 1.8rem;
-        color: var(--text-dark);
+        color: var(--dark);
         margin: 32px 0 16px 0;
       }
 
@@ -117,14 +118,14 @@
       }
 
       .contact-info {
-        background: var(--section-bg);
+        background: var(--secondary);
         padding: 32px;
         border-radius: 16px;
         margin-top: 40px;
       }
 
       .contact-info h3 {
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 16px;
       }
 
@@ -135,10 +136,10 @@
       .last-updated {
         text-align: center;
         font-style: italic;
-        color: var(--text-light);
+        color: var(--dark);
         margin-top: 40px;
         padding-top: 20px;
-        border-top: 1px solid var(--section-bg);
+        border-top: 1px solid var(--secondary);
       }
 
       @media (max-width: 768px) {

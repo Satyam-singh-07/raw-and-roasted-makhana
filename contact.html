@@ -19,6 +19,7 @@
     />
     <!-- Global Style -->
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
     <style>
       :root {
         --primary: #4B2E4A;
@@ -41,8 +42,8 @@
 
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: var(--background);
-        color: var(--text-light);
+        background-color: var(--light);
+        color: var(--dark);
         scroll-behavior: smooth;
         overflow-x: hidden;
       }
@@ -60,7 +61,7 @@
 
       h1 {
         font-size: 3.5rem;
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 1.5rem;
       }
 
@@ -71,7 +72,7 @@
       .contact-hero {
         padding: 100px 0 60px;
         text-align: center;
-        background: var(--section-bg);
+        background: var(--secondary);
         margin-bottom: 60px;
       }
 
@@ -84,7 +85,7 @@
       }
 
       .contact-form {
-        background: var(--background);
+        background: var(--light);
         padding: 40px;
         border-radius: 16px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -93,7 +94,7 @@
       .contact-form h2 {
         font-size: 2.5rem;
         margin-bottom: 24px;
-        color: var(--text-dark);
+        color: var(--dark);
       }
 
       .form-group {
@@ -104,14 +105,14 @@
         display: block;
         margin-bottom: 8px;
         font-weight: 600;
-        color: var(--text-dark);
+        color: var(--dark);
       }
 
       .form-group input,
       .form-group textarea {
         width: 100%;
         padding: 14px;
-        border: 2px solid var(--section-bg);
+        border: 2px solid var(--secondary);
         border-radius: 8px;
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
@@ -131,14 +132,14 @@
 
       .contact-info {
         padding: 40px;
-        background: var(--section-bg);
+        background: var(--secondary);
         border-radius: 16px;
       }
 
       .contact-info h2 {
         font-size: 2.5rem;
         margin-bottom: 32px;
-        color: var(--text-dark);
+        color: var(--dark);
       }
 
       .info-item {
@@ -156,12 +157,12 @@
 
       .info-item h3 {
         font-size: 1.2rem;
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 4px;
       }
 
       .info-item p {
-        color: var(--text-light);
+        color: var(--dark);
         line-height: 1.6;
       }
 
@@ -171,7 +172,7 @@
         justify-content: center;
         gap: 12px;
         background: var(--primary);
-        color: var(--background);
+        color: var(--light);
         font-weight: 600;
         padding: 14px 34px;
         border-radius: 0px;
@@ -186,7 +187,7 @@
       }
 
       .btn:hover {
-        background: var(--primary-light);
+        background: var(--secondary);
         transform: translateY(-2px);
       }
 

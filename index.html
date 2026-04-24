@@ -19,6 +19,7 @@
     />
     <!-- Global Style -->
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
     
     <style>
       /* Page Specific Styles for Index */
@@ -26,7 +27,7 @@
         font-size: 4.2rem;
         line-height: 1.2;
         font-weight: 700;
-        color: var(--text-dark);
+        color: var(--dark);
         margin-bottom: 1.2rem;
         letter-spacing: -0.01em;
       }
@@ -38,13 +39,13 @@
       h2 {
         font-size: 2.8rem;
         font-weight: 600;
-        color: var(--text-dark);
+        color: var(--dark);
         letter-spacing: -0.01em;
       }
 
       .section-subhead {
         font-size: 1.1rem;
-        color: var(--natural);
+        color: var(--accent);
         max-width: 650px;
         font-weight: 400;
         line-height: 1.6;
@@ -76,7 +77,7 @@
       .hero-badge {
         display: inline-block;
         padding: 6px 18px;
-        background: var(--accent-light);
+        background: var(--secondary);
         font-size: 0.75rem;
         font-weight: 600;
         letter-spacing: 1px;
@@ -87,7 +88,7 @@
 
       .hero-description {
         font-size: 1.15rem;
-        color: var(--text-light);
+        color: var(--dark);
         margin: 28px auto 36px;
         max-width: 600px;
         line-height: 1.7;
@@ -130,7 +131,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        color: var(--background);
+        color: var(--light);
         flex-direction: column;
         backdrop-filter: brightness(0.9);
         padding: 20px;
@@ -170,12 +171,12 @@
         font-size: 1.4rem;
         margin-bottom: 12px;
         font-family: "Playfair Display", serif;
-        color: var(--text-dark);
+        color: var(--dark);
       }
 
       /* Product showcase */
       .product-showcase {
-        background: var(--section-bg);
+        background: var(--secondary);
         padding: 90px 0;
         margin: 40px 0;
       }
@@ -190,7 +191,7 @@
       .product-item {
         flex: 1;
         min-width: 280px;
-        background: var(--background);
+        background: var(--light);
         border-radius: 32px;
         overflow: hidden;
         transition: all 0.4s ease;
@@ -257,7 +258,7 @@
       }
 
       .stat-circle {
-        background: var(--accent-light);
+        background: var(--secondary);
         padding: 28px 20px;
         text-align: center;
         border-radius: 28px;
@@ -272,7 +273,7 @@
 
       /* Testimonials */
       .testimonial-area {
-        background: var(--section-bg);
+        background: var(--secondary);
         padding: 90px 0;
         margin: 50px 0;
       }
@@ -286,7 +287,7 @@
 
       .test-card {
         flex: 1;
-        background: var(--background);
+        background: var(--light);
         padding: 36px;
         border-radius: 28px;
         border-left: 6px solid var(--accent);
@@ -294,7 +295,7 @@
       }
 
       .test-card i.fa-quote-left {
-        color: var(--accent-light);
+        color: var(--secondary);
         font-size: 2rem;
         margin-bottom: 18px;
       }
@@ -309,17 +310,17 @@
       }
 
       .cta-block h2 {
-        color: var(--background);
+        color: var(--light);
         word-break: break-word;
       }
 
       .cta-block .btn-light {
         background: var(--accent);
-        color: var(--text-dark);
+        color: var(--dark);
       }
 
       .btn-light:hover {
-        background: var(--accent-light);
+        background: var(--secondary);
       }
 
       @media (max-width: 1024px) {
@@ -432,7 +433,7 @@
             <div class="product-info">
               <div class="product-tag">ORIGINAL · UNROASTED</div>
               <h3 style="font-size: 1.6rem; margin: 8px 0">Raw Makhana</h3>
-              <p style="color: var(--text-light)">
+              <p style="color: var(--dark)">
                 Untouched, neutral canvas for sweet or savory creations. Soak,
                 roast, or blend into smoothies.
               </p>
@@ -444,7 +445,7 @@
             <div class="product-info">
               <div class="product-tag">CLASSIC ROASTED</div>
               <h3 style="font-size: 1.6rem; margin: 8px 0">Roasted Makhana</h3>
-              <p style="color: var(--text-light)">
+              <p style="color: var(--dark)">
                 Air-roasted with Himalayan salt & a dash of love. Ready-to-eat
                 crunchy delight.
               </p>
@@ -456,7 +457,7 @@
             <div class="product-info">
               <div class="product-tag">SIGNATURE BLEND</div>
               <h3 style="font-size: 1.6rem; margin: 8px 0">Spiced Turmeric</h3>
-              <p style="color: var(--text-light)">
+              <p style="color: var(--dark)">
                 Golden turmeric + black pepper fusion. Anti-inflammatory meets
                 incredible flavor.
               </p>
@@ -477,7 +478,7 @@
         </div>
         <div class="nutrition-content">
           <h2>Nutrient-Dense<br />Ancient Wisdom</h2>
-          <p style="margin: 20px 0; color: var(--text-light)">
+          <p style="margin: 20px 0; color: var(--dark)">
             Makhana isn't just a snack — it's a functional food. Packed with
             protein, calcium, and essential amino acids, it's a powerhouse for
             all ages.
@@ -521,7 +522,7 @@
               makhana with peri-peri is my 4pm ritual now.”
             </p>
             <div style="font-weight: 600">— Sneha R.</div>
-            <div style="font-size: 0.8rem; color: var(--natural)">Verified Buyer</div>
+            <div style="font-size: 0.8rem; color: var(--accent)">Verified Buyer</div>
           </div>
           <div class="test-card">
             <i class="fas fa-quote-left"></i>
@@ -530,7 +531,7 @@
               absolutely loves the mild nutty taste.”
             </p>
             <div style="font-weight: 600">— Dr. Ankit S.</div>
-            <div style="font-size: 0.8rem; color: var(--natural)">Parent & Nutritionist</div>
+            <div style="font-size: 0.8rem; color: var(--accent)">Parent & Nutritionist</div>
           </div>
           <div class="test-card">
             <i class="fas fa-quote-left"></i>
@@ -539,7 +540,7 @@
               guilt-free. My entire office is obsessed.”
             </p>
             <div style="font-weight: 600">— Meera K.</div>
-            <div style="font-size: 0.8rem; color: var(--natural)">Repeat Customer</div>
+            <div style="font-size: 0.8rem; color: var(--accent)">Repeat Customer</div>
           </div>
         </div>
       </div>
@@ -548,7 +549,7 @@
     <div class="container">
       <div class="cta-block">
         <h2 style="margin-bottom: 18px">Crunch into a healthier you</h2>
-        <p style="color: var(--accent-light); margin-bottom: 32px">
+        <p style="color: var(--secondary); margin-bottom: 32px">
           Subscribe & save 15% — plus free shipping on first box.
         </p>
         <a href="#" class="btn btn-light"
