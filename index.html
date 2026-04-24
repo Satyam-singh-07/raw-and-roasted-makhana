@@ -51,16 +51,16 @@
         line-height: 1.6;
       }
 
-      /* Hero - Full Background */
+      /* Hero - Modernized */
       .hero {
         position: relative;
-        min-height: 80vh;
+        min-height: 90vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 100px 0;
-        background-image: linear-gradient(rgba(209, 203, 186, 0.85), rgba(227, 221, 209, 0.85)), 
+        background-image: linear-gradient(rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.7)), 
                           url("https://images.pexels.com/photos/6210958/pexels-photo-6210958.jpeg?auto=compress&cs=tinysrgb&w=1600");
         background-size: cover;
         background-position: center;
@@ -70,7 +70,7 @@
       }
 
       .hero-content {
-        max-width: 800px;
+        max-width: 850px;
         z-index: 1;
       }
 
@@ -87,126 +87,102 @@
       }
 
       .hero-description {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
         color: var(--dark);
         margin: 28px auto 36px;
         max-width: 600px;
         line-height: 1.7;
       }
 
-      .hero-stats {
-        display: flex;
-        gap: 48px;
-        margin-top: 50px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .stat-item .stat-number {
-        font-size: 2.2rem;
-        font-weight: 700;
-        font-family: "Playfair Display", serif;
-        color: var(--primary);
-      }
-
-      /* Full width editorial image section */
-      .editorial-section {
-        margin: 40px 0 60px;
-        position: relative;
-        height: 520px;
-        background-image: url("https://images.pexels.com/photos/5857509/pexels-photo-5857509.jpeg?auto=compress&cs=tinysrgb&w=1600");
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .editorial-overlay {
-        background: rgba(75, 46, 74, 0.5);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--light);
-        flex-direction: column;
-        backdrop-filter: brightness(0.9);
-        padding: 20px;
-      }
-
-      .editorial-overlay h3 {
-        font-size: 2.8rem;
-        font-family: "Playfair Display", serif;
-        font-weight: 600;
-        margin-bottom: 16px;
-      }
-
-      /* Features */
-      .features {
+      /* Categories Section */
+      .categories {
         padding: 80px 0;
       }
 
-      .features-grid {
+      .category-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 40px;
-        margin-top: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
       }
 
-      .feature-card {
-        text-align: center;
-        padding: 20px;
+      .category-tile {
+        position: relative;
+        height: 300px;
+        border-radius: 24px;
+        overflow: hidden;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px;
+        transition: transform 0.3s ease;
       }
 
-      .feature-icon {
-        font-size: 2.5rem;
-        color: var(--accent);
-        margin-bottom: 20px;
+      .category-tile:hover {
+        transform: scale(1.02);
       }
 
-      .feature-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-        font-family: "Playfair Display", serif;
-        color: var(--dark);
+      .category-tile img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transition: transform 0.5s ease;
       }
 
-      /* Product showcase */
+      .category-tile:hover img {
+        transform: scale(1.1);
+      }
+
+      .category-tile::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      }
+
+      .category-tile h3 {
+        color: white;
+        z-index: 1;
+        font-size: 1.5rem;
+      }
+
+      /* Product grid */
       .product-showcase {
-        background: var(--secondary);
         padding: 90px 0;
-        margin: 40px 0;
       }
 
       .product-grid {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
         margin-top: 50px;
       }
 
       .product-item {
-        flex: 1;
-        min-width: 280px;
         background: var(--light);
-        border-radius: 32px;
+        border-radius: 24px;
         overflow: hidden;
         transition: all 0.4s ease;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0,0,0,0.05);
       }
 
       .product-item:hover {
         transform: translateY(-8px);
-        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       }
 
       .product-image {
-        height: 340px;
+        height: 300px;
         background-size: cover;
         background-position: center;
+        position: relative;
       }
 
       .product-raw-img { background-image: url("https://images.pexels.com/photos/4198024/pexels-photo-4198024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); }
@@ -214,96 +190,69 @@
       .product-spiced-img { background-image: url("https://images.pexels.com/photos/6621004/pexels-photo-6621004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); }
 
       .product-info {
-        padding: 28px;
+        padding: 24px;
       }
 
-      .product-tag {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      .product-price {
+        font-size: 1.25rem;
+        font-weight: 700;
         color: var(--primary);
-        font-weight: 600;
+        margin: 10px 0;
       }
 
-      /* Nutrition section */
-      .nutrition-section {
+      /* Benefits */
+      .benefits {
+        background: var(--secondary);
+        padding: 100px 0;
+        border-radius: 48px;
+        margin: 60px 0;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .benefit-item {
+        text-align: center;
+      }
+
+      .benefit-item i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      /* Story */
+      .story-section {
         display: flex;
-        flex-wrap: wrap;
-        gap: 60px;
         align-items: center;
-        padding: 60px 0;
+        gap: 60px;
+        padding: 100px 0;
       }
 
-      .nutrition-image-side {
+      .story-image {
         flex: 1;
         border-radius: 32px;
         overflow: hidden;
       }
 
-      .nutrition-image-side img {
+      .story-image img {
         width: 100%;
-        height: auto;
-        display: block;
+        height: 600px;
+        object-fit: cover;
       }
 
-      .nutrition-content {
+      .story-content {
         flex: 1;
-      }
-
-      .nutrition-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        margin-top: 40px;
-      }
-
-      .stat-circle {
-        background: var(--secondary);
-        padding: 28px 20px;
-        text-align: center;
-        border-radius: 28px;
-      }
-
-      .stat-circle .big-number {
-        font-size: 2.4rem;
-        font-weight: 800;
-        font-family: "Playfair Display", serif;
-        color: var(--primary);
-      }
-
-      /* Testimonials */
-      .testimonial-area {
-        background: var(--secondary);
-        padding: 90px 0;
-        margin: 50px 0;
-      }
-
-      .testimonial-flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 35px;
-        margin-top: 55px;
-      }
-
-      .test-card {
-        flex: 1;
-        background: var(--light);
-        padding: 36px;
-        border-radius: 28px;
-        border-left: 6px solid var(--accent);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
-      }
-
-      .test-card i.fa-quote-left {
-        color: var(--secondary);
-        font-size: 2rem;
-        margin-bottom: 18px;
       }
 
       /* CTA block */
       .cta-block {
         background: var(--primary);
-        padding: 70px 60px;
+        padding: 100px 60px;
         text-align: center;
         border-radius: 48px;
         margin: 60px 0 80px;
@@ -311,250 +260,184 @@
 
       .cta-block h2 {
         color: var(--light);
-        word-break: break-word;
+        font-size: 3.5rem;
       }
 
-      .cta-block .btn-light {
-        background: var(--accent);
-        color: var(--dark);
-      }
-
-      .btn-light:hover {
-        background: var(--secondary);
+      .cta-block .btn {
+        background: var(--light);
+        color: var(--primary);
+        margin-top: 40px;
+        padding: 20px 50px;
+        font-size: 1.1rem;
       }
 
       @media (max-width: 1024px) {
         h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.4rem; }
+        .category-grid { grid-template-columns: repeat(2, 1fr); }
+        .story-section { flex-direction: column; }
       }
 
       @media (max-width: 768px) {
-        h1 { font-size: 2.4rem; }
-        h2 { font-size: 1.8rem; }
-        .hero { padding: 40px 0 50px; border-radius: 24px; }
-        .cta-block { padding: 40px 24px; border-radius: 36px; }
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; }
+        .hero { padding: 60px 20px; border-radius: 24px; }
+        .category-grid { grid-template-columns: 1fr; }
+        .cta-block { padding: 60px 24px; }
+        .cta-block h2 { font-size: 2.5rem; }
       }
     </style>
   </head>
   <body>
     <div id="header-placeholder"></div>
 
+    <!-- 1. HERO -->
     <div class="container" id="home">
       <div class="hero">
         <div class="hero-content">
-          <div class="hero-badge">EST. 2024 · SUSTAINABLE HARVEST</div>
+          <div class="hero-badge">The Future of Snacking</div>
           <h1>
-            The Art of <span>Pure Crunch</span><br />Raw & Roasted Makhana
+            The Art of <span class="business-name"></span><br /><span>Pure Crunch</span>
           </h1>
           <p class="hero-description">
-            Hand-selected lotus seeds from the ancient wetlands of Mithila.
-            Gently roasted or left raw — each kernel is a celebration of earth’s
-            purest superfood.
+            Experience the crunch of artisanal Mithila lotus seeds. 
+            Pure, roasted, and packed with ancient wellness.
           </p>
-          <a href="#" class="btn"
-            ><i class="fas fa-leaf"></i> Discover Our Craft</a
-          >
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div>Chemical Free</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">4.9 ★</div>
-              <div>1.2k+ Reviews</div>
-            </div>
-          </div>
+          <a href="#products" class="btn" style="padding: 20px 45px; font-size: 1.1rem;">
+            Explore Collection <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="editorial-section">
-      <div class="editorial-overlay">
-        <h3>Harvested with Heritage</h3>
-        <p style="font-size: 1.1rem; max-width: 550px; opacity: 0.9">
-          Each makhana is sun-dried and hand-popped, preserving centuries of
-          tradition
-        </p>
-      </div>
-    </div>
-
+    <!-- 2. CATEGORIES -->
     <div class="container">
-      <div class="features">
-        <div style="text-align: center; max-width: 700px; margin: 0 auto">
-          <h2>Why Makhana Wins Hearts</h2>
-          <p class="section-subhead" style="margin: 16px auto 0">
-            Light as air, mighty in nutrition — the superfood that snacks like a
-            treat.
-          </p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-seedling"></i></div>
-            <h3>Naturally Gluten-Free</h3>
-            <p>
-              Perfect for sensitive diets, celiac-friendly and easy to digest.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-charging-station"></i>
-            </div>
-            <h3>Sustained Energy</h3>
-            <p>Low glycemic index, keeps you active without sugar crashes.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-heart"></i></div>
-            <h3>Heart-Loving</h3>
-            <p>
-              Rich in magnesium & potassium — supports cardiovascular health.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
-            <h3>Antioxidant Rich</h3>
-            <p>Flavonoids that protect cells and promote radiant skin.</p>
-          </div>
+      <div class="categories">
+        <h2 style="text-align: center;">Browse by Type</h2>
+        <div class="category-grid">
+          <a href="products.html?cat=roasted" class="category-tile">
+            <img src="https://images.pexels.com/photos/6129482/pexels-photo-6129482.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Roasted">
+            <h3>Roasted Classics</h3>
+          </a>
+          <a href="products.html?cat=raw" class="category-tile">
+            <img src="https://images.pexels.com/photos/4198024/pexels-photo-4198024.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Raw">
+            <h3>Raw Selection</h3>
+          </a>
+          <a href="products.html?cat=mixes" class="category-tile">
+            <img src="https://images.pexels.com/photos/6621004/pexels-photo-6621004.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mixes">
+            <h3>Gourmet Mixes</h3>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="product-showcase" id="products">
-      <div class="container">
-        <h2 style="text-align: center">The Makhana Collection</h2>
-        <p
-          class="section-subhead"
-          style="text-align: center; margin: 16px auto 0"
-        >
-          Every variant tells a story of purity and flavor
-        </p>
-        <div class="product-grid">
-          <div class="product-item">
-            <div class="product-image product-raw-img"></div>
-            <div class="product-info">
-              <div class="product-tag">ORIGINAL · UNROASTED</div>
-              <h3 style="font-size: 1.6rem; margin: 8px 0">Raw Makhana</h3>
-              <p style="color: var(--dark)">
-                Untouched, neutral canvas for sweet or savory creations. Soak,
-                roast, or blend into smoothies.
-              </p>
-              <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 600; color: var(--primary);">Explore →</a>
-            </div>
+    <!-- 3. PRODUCT GRID -->
+    <div class="container" id="products">
+      <div class="product-showcase">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+          <div>
+            <h2>Featured Products</h2>
+            <p class="section-subhead">Our best-sellers, hand-picked for you.</p>
           </div>
+          <a href="products.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">View All →</a>
+        </div>
+        
+        <div class="product-grid">
+          <!-- Product 1 -->
           <div class="product-item">
             <div class="product-image product-roasted-img"></div>
             <div class="product-info">
-              <div class="product-tag">CLASSIC ROASTED</div>
-              <h3 style="font-size: 1.6rem; margin: 8px 0">Roasted Makhana</h3>
-              <p style="color: var(--dark)">
-                Air-roasted with Himalayan salt & a dash of love. Ready-to-eat
-                crunchy delight.
-              </p>
-              <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 600; color: var(--primary);">Shop now →</a>
+              <div class="product-tag">Best Seller</div>
+              <h3 style="margin: 10px 0;">Classic Himalayan Salt</h3>
+              <p class="product-price">₹199</p>
+              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
             </div>
           </div>
+          <!-- Product 2 -->
           <div class="product-item">
             <div class="product-image product-spiced-img"></div>
             <div class="product-info">
-              <div class="product-tag">SIGNATURE BLEND</div>
-              <h3 style="font-size: 1.6rem; margin: 8px 0">Spiced Turmeric</h3>
-              <p style="color: var(--dark)">
-                Golden turmeric + black pepper fusion. Anti-inflammatory meets
-                incredible flavor.
-              </p>
-              <a href="#" style="display: inline-block; margin-top: 20px; font-weight: 600; color: var(--primary);">Discover →</a>
+              <div class="product-tag">Anti-Inflammatory</div>
+              <h3 style="margin: 10px 0;">Golden Turmeric Mix</h3>
+              <p class="product-price">₹249</p>
+              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-item">
+            <div class="product-image product-raw-img"></div>
+            <div class="product-info">
+              <div class="product-tag">Premium Quality</div>
+              <h3 style="margin: 10px 0;">Raw Jumbo Makhana</h3>
+              <p class="product-price">₹175</p>
+              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container" id="nutrition">
-      <div class="nutrition-section">
-        <div class="nutrition-image-side">
-          <img
-            src="https://images.pexels.com/photos/4050961/pexels-photo-4050961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Makhana ingredients display"
-          />
+    <!-- 4. BENEFITS / USP -->
+    <div class="container">
+      <div class="benefits">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h2 style="color: var(--dark);">Why Choose Our Makhana?</h2>
+          <p style="color: var(--dark); opacity: 0.8; margin-top: 15px;">A better way to snack, backed by nature.</p>
         </div>
-        <div class="nutrition-content">
-          <h2>Nutrient-Dense<br />Ancient Wisdom</h2>
-          <p style="margin: 20px 0; color: var(--dark)">
-            Makhana isn't just a snack — it's a functional food. Packed with
-            protein, calcium, and essential amino acids, it's a powerhouse for
-            all ages.
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Low Calorie</h3>
+            <p>High volume, low energy density. Perfect for weight management.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-bolt"></i>
+            <h3>Protein Rich</h3>
+            <p>Keeps you full longer and supports muscle recovery.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-leaf"></i>
+            <h3>100% Natural</h3>
+            <p>No preservatives, no additives, no artificial flavors.</p>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-globe"></i>
+            <h3>Ethically Sourced</h3>
+            <p>Direct from farmers in the Mithila region of India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. STORY / TRUST -->
+    <div class="container">
+      <div class="story-section">
+        <div class="story-image">
+          <img src="https://images.pexels.com/photos/5857509/pexels-photo-5857509.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Makhana Harvest">
+        </div>
+        <div class="story-content">
+          <div class="hero-badge" style="background: var(--accent); color: white;">Our Heritage</div>
+          <h2 style="margin: 20px 0;">From Wetlands to Your Home</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark); opacity: 0.9;">
+            Makhana harvesting is an art form. Our farmers dive into freshwater ponds to collect 
+            the seeds of the Euryale ferox plant. These seeds are then sun-dried, roasted over high 
+            heat, and hand-popped to create the white kernels you love.
+            <br><br>
+            By choosing Raw & Roasted, you're supporting sustainable agriculture and 
+            centuries-old traditional techniques.
           </p>
-          <div class="nutrition-stats-grid">
-            <div class="stat-circle">
-              <div class="big-number">12g</div>
-              <div>Protein / 100g</div>
-            </div>
-            <div class="stat-circle">
-              <div class="big-number">63mg</div>
-              <div>Magnesium</div>
-            </div>
-            <div class="stat-circle">
-              <div class="big-number">3.5g</div>
-              <div>Healthy Fats</div>
-            </div>
-            <div class="stat-circle">
-              <div class="big-number">0mg</div>
-              <div>Cholesterol</div>
-            </div>
-          </div>
+          <a href="about.html" class="btn-outline" style="margin-top: 30px; padding: 15px 35px; border-radius: 12px;">Learn More</a>
         </div>
       </div>
     </div>
 
-    <div class="testimonial-area" id="stories">
-      <div class="container">
-        <h2 style="text-align: center">From Our Community</h2>
-        <p
-          class="section-subhead"
-          style="text-align: center; margin: 12px auto 0"
-        >
-          Real voices, real crunch moments
-        </p>
-        <div class="testimonial-flex">
-          <div class="test-card">
-            <i class="fas fa-quote-left"></i>
-            <p style="font-style: italic; margin: 12px 0 20px">
-              “Finally a snack that doesn't make me feel heavy. The roasted
-              makhana with peri-peri is my 4pm ritual now.”
-            </p>
-            <div style="font-weight: 600">— Sneha R.</div>
-            <div style="font-size: 0.8rem; color: var(--accent)">Verified Buyer</div>
-          </div>
-          <div class="test-card">
-            <i class="fas fa-quote-left"></i>
-            <p style="font-style: italic; margin: 12px 0 20px">
-              “I use raw makhana for my toddler’s snacks. Clean, pure, and she
-              absolutely loves the mild nutty taste.”
-            </p>
-            <div style="font-weight: 600">— Dr. Ankit S.</div>
-            <div style="font-size: 0.8rem; color: var(--accent)">Parent & Nutritionist</div>
-          </div>
-          <div class="test-card">
-            <i class="fas fa-quote-left"></i>
-            <p style="font-style: italic; margin: 12px 0 20px">
-              “The turmeric blend is a game-changer! Crunchy, earthy, and
-              guilt-free. My entire office is obsessed.”
-            </p>
-            <div style="font-weight: 600">— Meera K.</div>
-            <div style="font-size: 0.8rem; color: var(--accent)">Repeat Customer</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- 6. REPETITION / FINAL CTA -->
     <div class="container">
       <div class="cta-block">
-        <h2 style="margin-bottom: 18px">Crunch into a healthier you</h2>
-        <p style="color: var(--secondary); margin-bottom: 32px">
-          Subscribe & save 15% — plus free shipping on first box.
+        <h2>Ready to Snack Smarter?</h2>
+        <p style="color: var(--light); font-size: 1.3rem; margin-top: 20px; opacity: 0.9;">
+          Join 5,000+ healthy snackers. Discover the artisanal difference.
         </p>
-        <a href="#" class="btn btn-light"
-          ><i class="fas fa-gift"></i> Claim Your Welcome Box</a
-        >
+        <a href="#products" class="btn">Explore Products</a>
       </div>
     </div>
 
