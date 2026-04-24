@@ -214,7 +214,21 @@
   </head>
   <body>
     <!-- Header Placeholder -->
-    <div id="header-placeholder"></div>
+<div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="index.html#nutrition">Wellness</a></li>
+      <li><a href="index.html#stories">Stories</a></li>
+    </ul>
+  </nav>
+</div>
 
     <!-- Contact Hero -->
     <section class="contact-hero">
@@ -291,26 +305,73 @@
     </div>
 
     <!-- Footer Placeholder -->
-    <div id="footer-placeholder"></div>
+<footer class="container">
+  <div>
+    <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px">
+      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
+    </a>
+    <p>
+      © 2025 · <span class="business-name"></span><br />Ethically sourced from family farms
+    </p>
+    <div style="margin-top: 16px;">
+      <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
+      <a href="contact.html" style="color: var(--dark); text-decoration: none;">Contact Us</a>
+    </div>
+  </div>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-pinterest"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919990019424?text=Hi%20Raw%20%26%20Roasted%20Makhana!%20I%20have%20a%20question%20about%20your%20products." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float i {
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+</style>
 
     <script>
-      function loadHTML(id, url) {
-        fetch(url)
-          .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.text();
-          })
-          .then(data => {
-            document.getElementById(id).innerHTML = data;
-          })
-          .catch(error => {
-            console.error('Error loading HTML:', error);
-          });
-      }
-
-      loadHTML('header-placeholder', 'header.html');
-      loadHTML('footer-placeholder', 'footer.html');
-
       // Smooth scroll with event delegation
       document.addEventListener("click", function (e) {
         const anchor = e.target.closest('a');
