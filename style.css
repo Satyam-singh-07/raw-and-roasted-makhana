@@ -91,9 +91,14 @@ h1, h2, h3, .logo {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
-.logo .accent {
+.logo-text {
+  font-family: "Playfair Display", serif;
   color: var(--primary);
 }
 
