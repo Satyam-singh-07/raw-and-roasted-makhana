@@ -3,14 +3,14 @@
  */
 
 const config = {
-  businessName: 'Shree Lotus',
+  businessName: 'Poppinuts',
   theme: {
     default: {
-      '--primary': '#FF5722',
-      '--secondary': '#FFC107',
-      '--accent': '#4CAF50',
-      '--dark': '#212121',
-      '--light': '#F5F5F5'
+      '--primary': '#4B2E4A',
+      '--secondary': '#D8D2C8',
+      '--accent': '#C9A46C',
+      '--dark': '#3A2F2A',
+      '--light': '#F5F1E8'
     }
   }
 };
