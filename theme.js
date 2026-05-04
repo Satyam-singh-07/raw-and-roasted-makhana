@@ -1,16 +1,27 @@
 /**
- * Global Configuration for Shree Lotus
+ * Global Configuration for Poppinuts
  */
 
 const config = {
   businessName: 'Poppinuts',
   theme: {
     default: {
-      '--primary': '#4B2E4A',
-      '--secondary': '#D8D2C8',
+      '--primary': '#FF5722',
+      '--secondary': '#1E1E1E',
+      '--accent': '#4CAF50',
+      '--dark': '#F5F5F5',
+      '--light': '#121212',
+      '--surface': '#242424',
+      '--border': '#333333'
+    },
+    purple: {
+      '--primary': '#B388FF',
+      '--secondary': '#2D2724',
       '--accent': '#C9A46C',
-      '--dark': '#3A2F2A',
-      '--light': '#F5F1E8'
+      '--dark': '#F5F1E8',
+      '--light': '#1A1614',
+      '--surface': '#25211E',
+      '--border': '#3D3530'
     }
   }
 };

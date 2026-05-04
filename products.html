@@ -22,16 +22,13 @@
     <script src="theme.js"></script>
     <style>
       :root {
-        --primary: #4B2E4A;
-        --primary-light: #6A4A67;
-        --accent: #C9A46C;
-        --accent-light: #E6D3A3;
-        --background: #F5F1E8;
-        --section-bg: #D8D2C8;
-        --text-dark: #3A2F2A;
-        --text-light: #5A4A45;
-        --natural: #6E7F5E;
-        --natural-light: #8A9A7B;
+        --primary: #FF5722;
+        --secondary: #1E1E1E;
+        --accent: #4CAF50;
+        --dark: #F5F5F5;
+        --light: #121212;
+        --surface: #242424;
+        --border: #333333;
       }
 
       * {
@@ -84,17 +81,18 @@
       }
 
       .product-card {
-        background: var(--light);
+        background: var(--surface);
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         transition: all 0.3s ease;
         position: relative;
+        border: 1px solid var(--border);
       }
 
       .product-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
       }
 
       .product-image {
@@ -112,10 +110,12 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
+        opacity: 0.9;
       }
 
       .product-card:hover .product-image img {
         transform: scale(1.05);
+        opacity: 1;
       }
 
       .product-badge {
@@ -123,7 +123,7 @@
         top: 16px;
         right: 16px;
         background: var(--accent);
-        color: var(--dark);
+        color: white;
         padding: 6px 12px;
         border-radius: 20px;
         font-size: 0.8rem;
@@ -147,6 +147,7 @@
         font-size: 1rem;
         line-height: 1.6;
         color: var(--dark);
+        opacity: 0.8;
         margin-bottom: 16px;
       }
 
@@ -165,12 +166,13 @@
       }
 
       .feature-tag {
-        background: var(--accent);
+        background: rgba(76, 175, 80, 0.1);
         color: var(--accent);
         padding: 4px 8px;
         border-radius: 12px;
         font-size: 0.8rem;
         font-weight: 500;
+        border: 1px solid var(--accent);
       }
 
       .btn {
@@ -179,7 +181,7 @@
         justify-content: center;
         gap: 12px;
         background: var(--primary);
-        color: var(--light);
+        color: white;
         font-weight: 600;
         padding: 14px 24px;
         border-radius: 0px;
@@ -195,7 +197,7 @@
       }
 
       .btn:hover {
-        background: var(--secondary);
+        background: #E64A19;
         transform: translateY(-2px);
       }
 
@@ -215,6 +217,7 @@
         font-size: 1.2rem;
         line-height: 1.6;
         color: var(--dark);
+        opacity: 0.9;
       }
 
       @media (max-width: 768px) {
@@ -243,193 +246,188 @@
     </style>
   </head>
   <body>
-    <!-- Header Placeholder -->
-<div class="container">
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
-      <span class="logo-text">Poppinuts</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="products.html">Collection</a></li>
-      <li><a href="index.html#nutrition">Wellness</a></li>
-    </ul>
-  </nav>
-</div>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 40px; width: auto;">
+        <span class="logo-text" style="font-size: 1.2rem;">Poppinuts</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
 
-    <!-- Products Hero -->
-    <section class="products-hero">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
+        <span class="logo-text">Poppinuts</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.html">Collection</a></li>
+        <li><a href="index.html#nutrition">Wellness</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="social-icons" style="margin-left: 0; display: flex; gap: 15px;">
+          <a href="#" style="margin-left: 0;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin-left: 0;"><i class="fab fa-pinterest"></i></a>
+          <a href="#" style="margin-left: 0;"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- Products Hero -->
+      <section class="products-hero">
+        <div class="container">
+          <h1>Our <span>Collection</span></h1>
+          <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
+            Premium air-popped water lily seeds, hand-selected and crafted for the ultimate healthy snacking experience.
+          </p>
+        </div>
+      </section>
+
+      <!-- Products Intro -->
       <div class="container">
-        <h1>Our <span>Collection</span></h1>
-        <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
-          Premium air-popped water lily seeds, hand-selected and crafted for the ultimate healthy snacking experience.
-        </p>
+        <div class="products-intro">
+          <h2>Our Core Product Range</h2>
+          <p>Our premium water lily seeds are hand-selected, naturally dried, and air-popped (not fried) under hygienic conditions. Known for their high protein content, airy crunch, and mild nutty flavor, they are ideal for roasting, seasoning, and healthy culinary use.</p>
+          <p style="margin-top: 15px; font-weight: 600;">A smart, protein-rich alternative to popcorn, chips and fried snacks.</p>
+        </div>
       </div>
-    </section>
 
-    <!-- Products Intro -->
-    <div class="container">
-      <div class="products-intro">
-        <h2>Our Core Product Range</h2>
-        <p>Our premium water lily seeds are hand-selected, naturally dried, and air-popped (not fried) under hygienic conditions. Known for their high protein content, airy crunch, and mild nutty flavor, they are ideal for roasting, seasoning, and healthy culinary use.</p>
-        <p style="margin-top: 15px; font-weight: 600;">A smart, protein-rich alternative to popcorn, chips and fried snacks.</p>
-      </div>
-    </div>
-
-    <!-- Products Grid -->
-    <div class="container">
-      <div class="products-grid">
-        <!-- Raw -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Premium Air-Popped Seeds (Raw)">
-            <div class="product-badge">Raw</div>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Premium Air-Popped Seeds (Raw)</h3>
-            <p class="product-description">Pure, oil-free air-popped fox nuts in their natural state. Perfect for health-focused cooking, roasting, or custom seasoning.</p>
-            <div class="product-features">
-              <span class="feature-tag">Not Fried</span>
-              <span class="feature-tag">High Protein</span>
-              <span class="feature-tag">Clean Label</span>
+      <!-- Products Grid -->
+      <div class="container">
+        <div class="products-grid">
+          <!-- Raw -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Premium Air-Popped Seeds (Raw)">
+              <div class="product-badge">Raw</div>
             </div>
-            <div class="product-price">Available in Bulk & Retail</div>
-          </div>
-        </div>
-
-        <!-- Roasted -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM.jpeg" alt="Roasted Water Lily Seeds">
-            <div class="product-badge">Roasted</div>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Roasted Water Lily Seeds</h3>
-            <p class="product-description">Artisanal roasting that brings out a superior crunch and delicate nutty flavor. A ready-to-eat superfood snack.</p>
-            <div class="product-features">
-              <span class="feature-tag">Low Calorie</span>
-              <span class="feature-tag">Easy Digestibility</span>
-              <span class="feature-tag">Antioxidant Rich</span>
+            <div class="product-content">
+              <h3 class="product-title">Premium Air-Popped Seeds (Raw)</h3>
+              <p class="product-description">Pure, oil-free air-popped fox nuts in their natural state. Perfect for health-focused cooking, roasting, or custom seasoning.</p>
+              <div class="product-features">
+                <span class="feature-tag">Not Fried</span>
+                <span class="feature-tag">High Protein</span>
+                <span class="feature-tag">Clean Label</span>
+              </div>
+              <div class="product-price">Available in Bulk & Retail</div>
             </div>
-            <div class="product-price">Perfect for Snacking</div>
           </div>
-        </div>
 
-        <!-- Flavored (Future) -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.30 PM.jpeg" alt="Flavored Water Lily Seeds">
-            <div class="product-badge">Coming Soon</div>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Flavored Water Lily Seeds</h3>
-            <p class="product-description">Gourmet flavored varieties designed for global palates. Innovative seasonings meeting the highest health standards.</p>
-            <div class="product-features">
-              <span class="feature-tag">Future Expansion</span>
-              <span class="feature-tag">Global Palate</span>
-              <span class="feature-tag">Innovative Flavors</span>
+          <!-- Roasted -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM.jpeg" alt="Roasted Water Lily Seeds">
+              <div class="product-badge">Roasted</div>
             </div>
-            <div class="product-price">Launching Soon</div>
+            <div class="product-content">
+              <h3 class="product-title">Roasted Water Lily Seeds</h3>
+              <p class="product-description">Artisanal roasting that brings out a superior crunch and delicate nutty flavor. A ready-to-eat superfood snack.</p>
+              <div class="product-features">
+                <span class="feature-tag">Low Calorie</span>
+                <span class="feature-tag">Easy Digestibility</span>
+                <span class="feature-tag">Antioxidant Rich</span>
+              </div>
+              <div class="product-price">Perfect for Snacking</div>
+            </div>
+          </div>
+
+          <!-- Flavored (Future) -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.30 PM.jpeg" alt="Flavored Water Lily Seeds">
+              <div class="product-badge">Coming Soon</div>
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Flavored Water Lily Seeds</h3>
+              <p class="product-description">Gourmet flavored varieties designed for global palates. Innovative seasonings meeting the highest health standards.</p>
+              <div class="product-features">
+                <span class="feature-tag">Future Expansion</span>
+                <span class="feature-tag">Global Palate</span>
+                <span class="feature-tag">Innovative Flavors</span>
+              </div>
+              <div class="product-price">Launching Soon</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Packaging Section -->
-    <div class="container" style="margin-top: 80px; margin-bottom: 100px;">
-      <div style="background: white; padding: 60px; border-radius: 48px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
-        <h2 style="text-align: center; margin-bottom: 40px; font-family: 'Playfair Display', serif; font-size: 2.5rem;">Available Packaging</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
-          <div style="padding: 30px; border: 1px solid var(--secondary); border-radius: 20px;">
-            <i class="fas fa-shopping-bag" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px;">Retail Packs</h3>
-            <p>Convenient, shelf-ready packaging designed for individual consumers and retail stores.</p>
-          </div>
-          <div style="padding: 30px; border: 1px solid var(--secondary); border-radius: 20px;">
-            <i class="fas fa-box-open" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px;">Bulk & Export Packs</h3>
-            <p>High-quality bulk packaging tailored for international shipping and wholesale distribution.</p>
-          </div>
-          <div style="padding: 30px; border: 1px solid var(--secondary); border-radius: 20px;">
-            <i class="fas fa-tags" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px;">Custom/Private Label</h3>
-            <p>On-request private labeling and bespoke packaging solutions to meet your specific brand needs.</p>
+      <!-- Packaging Section -->
+      <div class="container" style="margin-top: 80px; margin-bottom: 100px;">
+        <div style="background: var(--surface); padding: 60px; border-radius: 48px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid var(--border);">
+          <h2 style="text-align: center; margin-bottom: 40px; font-family: 'Playfair Display', serif; font-size: 2.5rem;">Available Packaging</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
+              <i class="fas fa-shopping-bag" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+              <h3 style="margin-bottom: 15px;">Retail Packs</h3>
+              <p>Convenient, shelf-ready packaging designed for individual consumers and retail stores.</p>
+            </div>
+            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
+              <i class="fas fa-box-open" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+              <h3 style="margin-bottom: 15px;">Bulk & Export Packs</h3>
+              <p>High-quality bulk packaging tailored for international shipping and wholesale distribution.</p>
+            </div>
+            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
+              <i class="fas fa-tags" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+              <h3 style="margin-bottom: 15px;">Custom/Private Label</h3>
+              <p>On-request private labeling and bespoke packaging solutions to meet your specific brand needs.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Footer Placeholder -->
-<footer class="container">
-  <div>
-    <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px">
-      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
+      <footer class="container">
+        <div>
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px">
+            <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
+          </a>
+          <p>
+            © 2025 · <span class="business-name">Poppinuts</span><br />Ethically sourced from family farms
+          </p>
+          <div style="margin-top: 16px;">
+            <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
+            <a href="contact.html" style="color: var(--dark); text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919990019424?text=Hi%20Poppinuts!%20I%20have%20a%20question%20about%20your%20healthy%20snacks." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
     </a>
-    <p>
-      © 2025 · <span class="business-name">Poppinuts</span><br />Ethically sourced from family farms
-    </p>
-    <div style="margin-top: 16px;">
-      <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
-      <a href="contact.html" style="color: var(--dark); text-decoration: none;">Contact Us</a>
-    </div>
-  </div>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-pinterest"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
-  </div>
-</footer>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919990019424?text=Hi%20Poppinuts!%20I%20have%20a%20question%20about%20your%20healthy%20snacks." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-float i {
-  margin-top: 2px;
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 16px;
-    right: 16px;
-    width: 56px;
-    height: 56px;
-    font-size: 24px;
-  }
-}
-</style>
 
     <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          const icon = menuToggle.querySelector('i');
+          if (sidebar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
       // Smooth scroll with event delegation
       document.addEventListener("click", function (e) {
         const anchor = e.target.closest('a');
@@ -446,6 +444,14 @@
           const target = document.getElementById(id);
           if (target) {
             e.preventDefault();
+
+            // Close sidebar on mobile after clicking
+            if (window.innerWidth <= 1024 && sidebar.classList.contains('active')) {
+              sidebar.classList.remove('active');
+              menuToggle.querySelector('i').classList.remove('fa-times');
+              menuToggle.querySelector('i').classList.add('fa-bars');
+            }
+
             target.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         }

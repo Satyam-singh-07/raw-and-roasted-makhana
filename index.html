@@ -60,7 +60,7 @@
         justify-content: center;
         text-align: center;
         padding: 100px 0;
-        background-image: linear-gradient(rgba(245, 245, 245, 0.6), rgba(245, 245, 245, 0.6)), 
+        background-image: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), 
                           url("assets/brocer images/ChatGPT Image Apr 22, 2026, 11_00_46 AM.png");
         background-size: cover;
         background-position: center;
@@ -166,16 +166,16 @@
       }
 
       .product-item {
-        background: var(--light);
+        background: var(--surface);
         border-radius: 24px;
         overflow: hidden;
         transition: all 0.4s ease;
-        border: 1px solid rgba(0,0,0,0.05);
+        border: 1px solid rgba(255,255,255,0.05);
       }
 
       .product-item:hover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
 
       .product-image {
@@ -259,12 +259,12 @@
       }
 
       .cta-block h2 {
-        color: var(--light);
+        color: white;
         font-size: 3.5rem;
       }
 
       .cta-block .btn {
-        background: var(--light);
+        background: white;
         color: var(--primary);
         margin-top: 40px;
         padding: 20px 50px;
@@ -288,251 +288,249 @@
     </style>
   </head>
   <body>
-<div class="container">
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
-      <span class="logo-text">Poppinuts</span>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 40px; width: auto;">
+        <span class="logo-text" style="font-size: 1.2rem;">Poppinuts</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
+        <span class="logo-text">Poppinuts</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.html">Collection</a></li>
+        <li><a href="index.html#nutrition">Wellness</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="social-icons" style="margin-left: 0; display: flex; gap: 15px;">
+          <a href="#" style="margin-left: 0;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="margin-left: 0;"><i class="fab fa-pinterest"></i></a>
+          <a href="#" style="margin-left: 0;"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- 1. HERO -->
+      <div class="container" id="home">
+        <div class="hero">
+          <div class="hero-content">
+            <div class="hero-badge">The Future of Snacking</div>
+            <h1>
+              The Art of <span class="business-name">Poppinuts</span><br /><span>Pure Crunch</span>
+            </h1>
+            <p class="hero-description">
+              Experience the crunch of artisanal air-popped water lily seeds. 
+              Pure, oil-free, and packed with superfood nutrition.
+            </p>
+            <a href="#products" class="btn" style="padding: 20px 45px; font-size: 1.1rem;">
+              Explore Collection <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. CATEGORIES -->
+      <div class="container">
+        <div class="categories">
+          <h2 style="text-align: center;">Our Product Categories</h2>
+          <p style="text-align: center; color: var(--accent); margin-bottom: 40px;">From pure seeds to gourmet roasted snacks.</p>
+          <div class="category-grid">
+            <a href="products.html" class="category-tile">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Raw">
+              <h3>Premium Air-Popped Seeds (Raw)</h3>
+            </a>
+            <a href="products.html" class="category-tile">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (1).jpeg" alt="Roasted">
+              <h3>Roasted Water Lily Seeds</h3>
+            </a>
+            <a href="products.html" class="category-tile">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.30 PM (1).jpeg" alt="Mixes">
+              <h3>Flavored Seeds (Future Expansion)</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. PRODUCT GRID -->
+      <div class="container" id="products">
+        <div class="product-showcase">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
+            <div>
+              <h2>Featured Products</h2>
+              <p class="section-subhead">Our best-sellers, hand-picked for you.</p>
+            </div>
+            <a href="products.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">View All →</a>
+          </div>
+          
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-item">
+              <div class="product-image product-roasted-img"></div>
+              <div class="product-info">
+                <div class="product-tag">Best Seller</div>
+                <h3 style="margin: 10px 0;">Classic Himalayan Salt</h3>
+                <p class="product-price">₹199</p>
+                <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-item">
+              <div class="product-image product-spiced-img"></div>
+              <div class="product-info">
+                <div class="product-tag">Anti-Inflammatory</div>
+                <h3 style="margin: 10px 0;">Golden Turmeric Mix</h3>
+                <p class="product-price">₹249</p>
+                <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-item">
+              <div class="product-image product-raw-img"></div>
+              <div class="product-info">
+                <div class="product-tag">Premium Quality</div>
+                <h3 style="margin: 10px 0;">Raw Jumbo Makhana</h3>
+                <p class="product-price">₹175</p>
+                <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. BENEFITS / SUPERFOOD -->
+      <div class="container" id="nutrition">
+        <div class="benefits">
+          <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="hero-badge">Superfood Profile</div>
+            <h2 style="color: var(--dark); margin-top: 15px;">Why Water Lily Seeds Are a Superfood</h2>
+            <p style="color: var(--dark); opacity: 0.8; margin-top: 15px; font-size: 1.1rem;">
+              Air-popped water lily seeds are a time-honored superfood, valued for their protein density, easy digestibility, and clean nutritional balance.
+            </p>
+          </div>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <i class="fas fa-protein"></i>
+              <h3>Plant-Based Protein</h3>
+              <p>High in plant-based protein for sustained energy throughout your day.</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-shield-virus"></i>
+              <h3>Antioxidant Rich</h3>
+              <p>Naturally rich in antioxidants to support your body's natural defenses.</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-running"></i>
+              <h3>Muscle Recovery</h3>
+              <p>Supports muscle recovery, making it ideal for active lifestyles and athletes.</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-weight"></i>
+              <h3>Weight Management</h3>
+              <p>Low calorie and high volume helps with healthy weight management.</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-heart"></i>
+              <h3>Heart Friendly</h3>
+              <p>Heart-friendly and low glycemic index, perfect for clean-eating diets.</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-check-circle"></i>
+              <h3>Diabetes Aware</h3>
+              <p>Ideal for diabetes-aware diets due to its low glycemic profile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. STORY / TRUST -->
+      <div class="container">
+        <div class="story-section">
+          <div class="story-image">
+            <img src="assets/brocer images/ChatGPT Image Apr 22, 2026, 11_13_33 AM.png" alt="Makhana Heritage">
+          </div>
+          <div class="story-content">
+            <div class="hero-badge" style="background: var(--accent); color: white;">Our Heritage</div>
+            <h2 style="margin: 20px 0;">About Poppinuts</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark); opacity: 0.9;">
+              Poppinuts is a premium healthy snacking brand made from air-popped water lily seeds, also known globally as lotus seeds or makhana. Celebrated for their high protein content and light texture, our seeds are a true superfood.
+              <br><br>
+              As a flagship brand of Shree Lotus Exports Pvt. Ltd., we are committed to superfood nutrition, purity, and premium quality. Our seeds are carefully sourced, air-popped without oil, and rigorously quality-checked.
+            </p>
+            <a href="about.html" class="btn-outline" style="margin-top: 30px; padding: 15px 35px; border-radius: 12px;">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. REPETITION / FINAL CTA -->
+      <div class="container">
+        <div class="cta-block">
+          <h2>Ready to Snack Smarter?</h2>
+          <p style="color: var(--light); font-size: 1.3rem; margin-top: 20px; opacity: 0.9;">
+            Join 5,000+ healthy snackers. Discover the artisanal difference.
+          </p>
+          <a href="#products" class="btn">Explore Products</a>
+        </div>
+      </div>
+
+      <footer class="container">
+        <div>
+          <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px">
+            <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
+          </a>
+          <p>
+            © 2025 · <span class="business-name"></span><br />Ethically sourced from family farms
+          </p>
+          <div style="margin-top: 16px;">
+            <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
+            <a href="contact.html" style="color: var(--dark); text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919990019424?text=Hi%20Raw%20%26%20Roasted%20Makhana!%20I%20have%20a%20question%20about%20your%20products." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="products.html">Collection</a></li>
-      <li><a href="index.html#nutrition">Wellness</a></li>
-    </ul>
-  </nav>
-</div>
-
-    <!-- 1. HERO -->
-    <div class="container" id="home">
-      <div class="hero">
-        <div class="hero-content">
-          <div class="hero-badge">The Future of Snacking</div>
-          <h1>
-            The Art of <span class="business-name">Poppinuts</span><br /><span>Pure Crunch</span>
-          </h1>
-          <p class="hero-description">
-            Experience the crunch of artisanal air-popped water lily seeds. 
-            Pure, oil-free, and packed with superfood nutrition.
-          </p>
-          <a href="#products" class="btn" style="padding: 20px 45px; font-size: 1.1rem;">
-            Explore Collection <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. CATEGORIES -->
-    <div class="container">
-      <div class="categories">
-        <h2 style="text-align: center;">Our Product Categories</h2>
-        <p style="text-align: center; color: var(--accent); margin-bottom: 40px;">From pure seeds to gourmet roasted snacks.</p>
-        <div class="category-grid">
-          <a href="products.html" class="category-tile">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Raw">
-            <h3>Premium Air-Popped Seeds (Raw)</h3>
-          </a>
-          <a href="products.html" class="category-tile">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (1).jpeg" alt="Roasted">
-            <h3>Roasted Water Lily Seeds</h3>
-          </a>
-          <a href="products.html" class="category-tile">
-            <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.30 PM (1).jpeg" alt="Mixes">
-            <h3>Flavored Seeds (Future Expansion)</h3>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. PRODUCT GRID -->
-    <div class="container" id="products">
-      <div class="product-showcase">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
-          <div>
-            <h2>Featured Products</h2>
-            <p class="section-subhead">Our best-sellers, hand-picked for you.</p>
-          </div>
-          <a href="products.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">View All →</a>
-        </div>
-        
-        <div class="product-grid">
-          <!-- Product 1 -->
-          <div class="product-item">
-            <div class="product-image product-roasted-img"></div>
-            <div class="product-info">
-              <div class="product-tag">Best Seller</div>
-              <h3 style="margin: 10px 0;">Classic Himalayan Salt</h3>
-              <p class="product-price">₹199</p>
-              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
-            </div>
-          </div>
-          <!-- Product 2 -->
-          <div class="product-item">
-            <div class="product-image product-spiced-img"></div>
-            <div class="product-info">
-              <div class="product-tag">Anti-Inflammatory</div>
-              <h3 style="margin: 10px 0;">Golden Turmeric Mix</h3>
-              <p class="product-price">₹249</p>
-              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
-            </div>
-          </div>
-          <!-- Product 3 -->
-          <div class="product-item">
-            <div class="product-image product-raw-img"></div>
-            <div class="product-info">
-              <div class="product-tag">Premium Quality</div>
-              <h3 style="margin: 10px 0;">Raw Jumbo Makhana</h3>
-              <p class="product-price">₹175</p>
-              <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. BENEFITS / SUPERFOOD -->
-    <div class="container" id="nutrition">
-      <div class="benefits">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-          <div class="hero-badge">Superfood Profile</div>
-          <h2 style="color: var(--dark); margin-top: 15px;">Why Water Lily Seeds Are a Superfood</h2>
-          <p style="color: var(--dark); opacity: 0.8; margin-top: 15px; font-size: 1.1rem;">
-            Air-popped water lily seeds are a time-honored superfood, valued for their protein density, easy digestibility, and clean nutritional balance.
-          </p>
-        </div>
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <i class="fas fa-protein"></i>
-            <h3>Plant-Based Protein</h3>
-            <p>High in plant-based protein for sustained energy throughout your day.</p>
-          </div>
-          <div class="benefit-item">
-            <i class="fas fa-shield-virus"></i>
-            <h3>Antioxidant Rich</h3>
-            <p>Naturally rich in antioxidants to support your body's natural defenses.</p>
-          </div>
-          <div class="benefit-item">
-            <i class="fas fa-running"></i>
-            <h3>Muscle Recovery</h3>
-            <p>Supports muscle recovery, making it ideal for active lifestyles and athletes.</p>
-          </div>
-          <div class="benefit-item">
-            <i class="fas fa-weight"></i>
-            <h3>Weight Management</h3>
-            <p>Low calorie and high volume helps with healthy weight management.</p>
-          </div>
-          <div class="benefit-item">
-            <i class="fas fa-heart"></i>
-            <h3>Heart Friendly</h3>
-            <p>Heart-friendly and low glycemic index, perfect for clean-eating diets.</p>
-          </div>
-          <div class="benefit-item">
-            <i class="fas fa-check-circle"></i>
-            <h3>Diabetes Aware</h3>
-            <p>Ideal for diabetes-aware diets due to its low glycemic profile.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. STORY / TRUST -->
-    <div class="container">
-      <div class="story-section">
-        <div class="story-image">
-          <img src="assets/brocer images/ChatGPT Image Apr 22, 2026, 11_13_33 AM.png" alt="Makhana Heritage">
-        </div>
-        <div class="story-content">
-          <div class="hero-badge" style="background: var(--accent); color: white;">Our Heritage</div>
-          <h2 style="margin: 20px 0;">About Poppinuts</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark); opacity: 0.9;">
-            Poppinuts is a premium healthy snacking brand made from air-popped water lily seeds, also known globally as lotus seeds or makhana. Celebrated for their high protein content and light texture, our seeds are a true superfood.
-            <br><br>
-            As a flagship brand of Shree Lotus Exports Pvt. Ltd., we are committed to superfood nutrition, purity, and premium quality. Our seeds are carefully sourced, air-popped without oil, and rigorously quality-checked.
-          </p>
-          <a href="about.html" class="btn-outline" style="margin-top: 30px; padding: 15px 35px; border-radius: 12px;">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. REPETITION / FINAL CTA -->
-    <div class="container">
-      <div class="cta-block">
-        <h2>Ready to Snack Smarter?</h2>
-        <p style="color: var(--light); font-size: 1.3rem; margin-top: 20px; opacity: 0.9;">
-          Join 5,000+ healthy snackers. Discover the artisanal difference.
-        </p>
-        <a href="#products" class="btn">Explore Products</a>
-      </div>
-    </div>
-
-<footer class="container">
-  <div>
-    <a href="index.html" class="logo" style="display: inline-block; margin-bottom: 12px">
-      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
-    </a>
-    <p>
-      © 2025 · <span class="business-name"></span><br />Ethically sourced from family farms
-    </p>
-    <div style="margin-top: 16px;">
-      <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
-      <a href="contact.html" style="color: var(--dark); text-decoration: none;">Contact Us</a>
-    </div>
-  </div>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-pinterest"></i></a>
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
-  </div>
-</footer>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919990019424?text=Hi%20Raw%20%26%20Roasted%20Makhana!%20I%20have%20a%20question%20about%20your%20products." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-}
-
-.whatsapp-float i {
-  margin-top: 2px;
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 16px;
-    right: 16px;
-    width: 56px;
-    height: 56px;
-    font-size: 24px;
-  }
-}
-</style>
 
     <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+          const icon = menuToggle.querySelector('i');
+          if (sidebar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+
+      // Smooth Scroll
       document.addEventListener("click", function (e) {
         const anchor = e.target.closest('a');
         if (!anchor) return;
@@ -544,6 +542,14 @@
           const target = document.getElementById(id);
           if (target) {
             e.preventDefault();
+            
+            // Close sidebar on mobile after clicking
+            if (window.innerWidth <= 1024 && sidebar.classList.contains('active')) {
+              sidebar.classList.remove('active');
+              menuToggle.querySelector('i').classList.remove('fa-times');
+              menuToggle.querySelector('i').classList.add('fa-bars');
+            }
+            
             target.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         }
