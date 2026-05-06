@@ -1,11 +1,11 @@
 :root {
-  --primary: #FF5722;
-  --secondary: #1E1E1E; /* Darker section background */
-  --accent: #4CAF50;
+  --primary: #D4AF37;
+  --secondary: #26143A; /* Darker section background */
+  --accent: #E5C158;
   --dark: #F5F5F5;    /* Light text */
-  --light: #121212;   /* Dark background */
-  --surface: #242424;
-  --border: #333333;
+  --light: #1A0B2E;   /* Dark background */
+  --surface: #2D1B46;
+  --border: #422665;
 }
 
 * {
@@ -56,7 +56,7 @@ h1, h2, h3, .logo {
 }
 
 .btn:hover {
-  background: #E64A19; /* Slightly darker orange */
+  background: #B5952F; /* Metallic Gold Hover */
   color: #ffffff;
   transform: translateY(-2px);
 }
