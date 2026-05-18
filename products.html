@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="assets/logo/makana logo.png" />
     <!-- Google Fonts: Playfair Display + Montserrat -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome 6 -->
@@ -24,13 +24,13 @@
     <script src="theme.js"></script>
     <style>
       :root {
-        --primary: #D4AF37;
-        --secondary: #26143A;
-        --accent: #E5C158;
-        --dark: #F5F5F5;
-        --light: #1A0B2E;
-        --surface: #2D1B46;
-        --border: #422665;
+        --primary: #2a0a42;
+        --secondary: #b87318;
+        --accent: #d7a638;
+        --dark: #1b1420;
+        --light: #fff8ec;
+        --surface: #fffdf8;
+        --border: rgba(184, 115, 24, 0.34);
       }
 
       * {
@@ -75,196 +75,145 @@
         margin-bottom: 60px;
       }
 
-      .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 40px;
-        padding: 60px 0;
-      }
-
-      .product-card {
-        background: var(--surface);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-        transition: all 0.3s ease;
-        position: relative;
-        border: 1px solid var(--border);
-      }
-
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-      }
-
-      .product-image {
-        height: 280px;
-        background: var(--secondary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-        opacity: 0.9;
-      }
-
-      .product-card:hover .product-image img {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-
-      .product-badge {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        background: var(--accent);
-        color: white;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .product-content {
-        padding: 24px;
-      }
-
-      .product-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--dark);
-        margin-bottom: 8px;
-      }
-
-      .product-description {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--dark);
-        opacity: 0.8;
-        margin-bottom: 16px;
-      }
-
-      .product-price {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 20px;
-      }
-
-      .product-features {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 20px;
-      }
-
-      .feature-tag {
-        background: rgba(76, 175, 80, 0.1);
-        color: var(--accent);
-        padding: 4px 8px;
-        border-radius: 12px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        border: 1px solid var(--accent);
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        background: var(--primary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 24px;
-        border-radius: 0px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        font-size: 0.95rem;
-        letter-spacing: 0.5px;
-        cursor: pointer;
-        border: none;
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        width: 100%;
-      }
-
-      .btn:hover {
-        background: #B5952F;
-        transform: translateY(-2px);
-      }
-
       .products-intro {
         text-align: center;
         max-width: 800px;
-        margin: 0 auto 60px;
+        margin: 0 auto 80px;
       }
 
       .products-intro h2 {
-        font-size: 2.2rem;
-        color: var(--dark);
-        margin-bottom: 16px;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: var(--primary);
       }
 
       .products-intro p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: var(--dark);
+        font-size: 1.15rem;
+        line-height: 1.8;
         opacity: 0.9;
       }
 
-      @media (max-width: 768px) {
-        .products-hero {
-          padding: 60px 0 40px;
-        }
+      .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        padding-bottom: 100px;
+      }
 
-        h1 {
-          font-size: 2.8rem;
-        }
+      .product-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
 
-        .products-grid {
+      .product-row:nth-child(even) {
+        direction: rtl;
+      }
+
+      .product-row:nth-child(even) .product-details {
+        direction: ltr;
+      }
+
+      .product-visual img {
+        width: 100%;
+        border-radius: 48px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        border: 1px solid var(--border);
+      }
+
+      .product-details h2 {
+        font-size: 3rem;
+        margin-bottom: 24px;
+        color: var(--dark);
+      }
+
+      .product-tag {
+        display: inline-block;
+        padding: 6px 16px;
+        background: var(--primary);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      .product-description {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .specs-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 40px;
+      }
+
+      .specs-list li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+      }
+
+      .specs-list i {
+        color: var(--primary);
+      }
+
+      @media (max-width: 1024px) {
+        .product-row {
           grid-template-columns: 1fr;
-          gap: 30px;
-          padding: 40px 0;
+          gap: 40px;
+          text-align: center;
         }
 
-        .product-image {
-          height: 240px;
+        .product-row:nth-child(even) {
+          direction: ltr;
         }
 
-        .product-content {
-          padding: 20px;
+        .product-details h2 {
+          font-size: 2.5rem;
         }
       }
     </style>
   </head>
   <body>
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-      <a href="index.html" class="logo">
-        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 40px; width: auto;">
-        <span class="logo-text" style="font-size: 1.2rem;">Poppinuts</span>
-      </a>
-      <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </button>
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/logo/makana logo.png" alt="Poppinuts Logo">
+          <span class="logo-text">Poppinuts</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html">Collection</a></li>
+          <li><a href="index.html#nutrition">Wellness</a></li>
+        </ul>
+
+        <div class="header-socials">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </header>
 
-    <!-- Sidebar -->
+    <!-- Mobile Sidebar -->
     <aside class="sidebar" id="sidebar">
-      <a href="index.html" class="logo">
-        <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
-        <span class="logo-text">Poppinuts</span>
-      </a>
       <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -272,11 +221,12 @@
         <li><a href="products.html">Collection</a></li>
         <li><a href="index.html#nutrition">Wellness</a></li>
       </ul>
+      
       <div class="sidebar-footer">
-        <div class="social-icons" style="margin-left: 0; display: flex; gap: 15px;">
-          <a href="#" style="margin-left: 0;"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="margin-left: 0;"><i class="fab fa-pinterest"></i></a>
-          <a href="#" style="margin-left: 0;"><i class="fab fa-facebook-f"></i></a>
+        <div class="social-icons" style="display: flex; gap: 20px;">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
     </aside>
@@ -298,70 +248,72 @@
           <h2>Our Core Product Range</h2>
           <p>Our premium water lily seeds are hand-selected, naturally dried, and air-popped (not fried) under hygienic conditions. Known for their high protein content, airy crunch, and mild nutty flavor, they are ideal for roasting, seasoning, and healthy culinary use.</p>
         </div>
-      </div>
 
-      <!-- Products Grid -->
-      <div class="container">
-        <div class="products-grid">
-          <!-- Raw -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Premium Air-Popped Seeds (Raw)">
-              <div class="product-badge">Raw</div>
+        <div class="product-list">
+          
+          <!-- Product 1 -->
+          <div class="product-row" id="raw-makhana">
+            <div class="product-visual">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Premium Raw Makhana">
             </div>
-            <div class="product-content">
-              <h3 class="product-title">Premium Air-Popped Seeds (Raw)</h3>
-              <p class="product-description">Pure, oil-free air-popped fox nuts in their natural state. Perfect for health-focused cooking, roasting, or custom seasoning.</p>
-              <div class="product-features">
-                <span class="feature-tag">Not Fried</span>
-                <span class="feature-tag">High Protein</span>
-                <span class="feature-tag">Clean Label</span>
-              </div>
-              <div class="product-price">Available in Bulk & Retail</div>
+            <div class="product-details">
+              <div class="product-tag">Global Favorite</div>
+              <h2>Premium Raw Jumbo Makhana</h2>
+              <p class="product-description">
+                Our jumbo-sized raw seeds are the purest form of water lily seeds. These are carefully sorted for size and purity, offering a high-crunch potential. Ideal for B2B distributors and health brands looking for premium base materials.
+              </p>
+              <ul class="specs-list">
+                <li><i class="fas fa-check"></i> Hand-selected Large Grades</li>
+                <li><i class="fas fa-check"></i> High Protein Content</li>
+                <li><i class="fas fa-check"></i> Naturally Gluten-Free</li>
+                <li><i class="fas fa-check"></i> Bulk & Export Ready</li>
+              </ul>
+              <a href="contact.html" class="btn" style="border-radius: 12px; padding: 15px 40px;">Request Quote</a>
             </div>
           </div>
 
-          <!-- Roasted -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM.jpeg" alt="Roasted Water Lily Seeds">
-              <div class="product-badge">Roasted</div>
+          <!-- Product 2 -->
+          <div class="product-row" id="roasted-makhana">
+            <div class="product-visual">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (1).jpeg" alt="Artisanal Roasted Makhana">
             </div>
-            <div class="product-content">
-              <h3 class="product-title">Roasted Water Lily Seeds</h3>
-              <p class="product-description">Artisanal roasting that brings out a superior crunch and delicate nutty flavor. A ready-to-eat superfood snack.</p>
-              <div class="product-features">
-                <span class="feature-tag">Low Calorie</span>
-                <span class="feature-tag">Easy Digestibility</span>
-                <span class="feature-tag">Antioxidant Rich</span>
-              </div>
-              <div class="product-price">Perfect for Snacking</div>
+            <div class="product-details">
+              <div class="product-tag">Ready-to-Eat</div>
+              <h2>Artisanal Roasted Water Lily Seeds</h2>
+              <p class="product-description">
+                Experience the perfect light snack. Our roasted makhana is prepared using traditional dry-roasting techniques with zero oil. We season them with premium natural flavors like Himalayan Pink Salt to maintain their superfood status.
+              </p>
+              <ul class="specs-list">
+                <li><i class="fas fa-check"></i> 100% Oil-Free (Dry Roasted)</li>
+                <li><i class="fas fa-check"></i> Low Calorie, High Volume</li>
+                <li><i class="fas fa-check"></i> No Preservatives</li>
+                <li><i class="fas fa-check"></i> Available in Various Pack Sizes</li>
+              </ul>
+              <a href="contact.html" class="btn" style="border-radius: 12px; padding: 15px 40px;">Order Samples</a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Packaging Section -->
-      <div class="container" style="margin-top: 80px; margin-bottom: 100px;">
-        <div style="background: var(--surface); padding: 60px; border-radius: 48px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid var(--border);">
-          <h2 style="text-align: center; margin-bottom: 40px; font-family: 'Playfair Display', serif; font-size: 2.5rem;">Available Packaging</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
-            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
-              <i class="fas fa-shopping-bag" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-              <h3 style="margin-bottom: 15px;">Retail Packs</h3>
-              <p>Convenient, shelf-ready packaging designed for individual consumers and retail stores.</p>
+          <!-- Product 3 -->
+          <div class="product-row" id="export-bulk">
+            <div class="product-visual">
+              <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM.jpeg" alt="Export Quality Makhana">
             </div>
-            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
-              <i class="fas fa-box-open" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-              <h3 style="margin-bottom: 15px;">Bulk & Export Packs</h3>
-              <p>High-quality bulk packaging tailored for international shipping and wholesale distribution.</p>
-            </div>
-            <div style="padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: var(--secondary);">
-              <i class="fas fa-tags" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
-              <h3 style="margin-bottom: 15px;">Custom/Private Label</h3>
-              <p>On-request private labeling and bespoke packaging solutions to meet your specific brand needs.</p>
+            <div class="product-details">
+              <div class="product-tag">B2B Solutions</div>
+              <h2>Bulk Export Grades</h2>
+              <p class="product-description">
+                We specialize in bulk supply for international markets. Our export grades meet stringent quality standards for moisture content and purity. We provide flexible packaging solutions including white-labeling for global retailers.
+              </p>
+              <ul class="specs-list">
+                <li><i class="fas fa-check"></i> Customized Grading (Phool & Handi)</li>
+                <li><i class="fas fa-check"></i> International Standard Packaging</li>
+                <li><i class="fas fa-check"></i> Full Quality Compliance</li>
+                <li><i class="fas fa-check"></i> Reliable Logistics Support</li>
+              </ul>
+              <a href="contact.html" class="btn" style="border-radius: 12px; padding: 15px 40px;">Inquire for B2B</a>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -379,16 +331,16 @@
           </div>
         </div>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </footer>
     </main>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/918097010359?text=Hi%20Poppinuts!%20I%20have%20a%20question%20about%20your%20healthy%20snacks." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918097010359" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -396,10 +348,11 @@
       // Mobile Menu Toggle
       const menuToggle = document.getElementById('menuToggle');
       const sidebar = document.getElementById('sidebar');
-
+      
       if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', () => {
           sidebar.classList.toggle('active');
+          menuToggle.setAttribute('aria-expanded', sidebar.classList.contains('active') ? 'true' : 'false');
           const icon = menuToggle.querySelector('i');
           if (sidebar.classList.contains('active')) {
             icon.classList.remove('fa-bars');
@@ -411,30 +364,27 @@
         });
       }
 
-      // Smooth scroll with event delegation
+      // Smooth Scroll
       document.addEventListener("click", function (e) {
         const anchor = e.target.closest('a');
         if (!anchor) return;
-
         const href = anchor.getAttribute("href");
         if (!href) return;
-
-        // Check if it's a hash link for the index page or current page
         if (href.startsWith("#") || href.startsWith("index.html#")) {
           const id = href.includes("#") ? href.split("#")[1] : null;
           if (!id) return;
-
           const target = document.getElementById(id);
           if (target) {
             e.preventDefault();
-
+            
             // Close sidebar on mobile after clicking
             if (window.innerWidth <= 1024 && sidebar.classList.contains('active')) {
               sidebar.classList.remove('active');
+              menuToggle.setAttribute('aria-expanded', 'false');
               menuToggle.querySelector('i').classList.remove('fa-times');
               menuToggle.querySelector('i').classList.add('fa-bars');
             }
-
+            
             target.scrollIntoView({ behavior: "smooth", block: "start" });
           }
         }
@@ -442,4 +392,3 @@
     </script>
   </body>
 </html>
-

@@ -1,20 +1,33 @@
-<!-- Mobile Header -->
-<header class="mobile-header">
-  <a href="index.html" class="logo">
-    <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 40px; width: auto;">
-    <span class="logo-text" style="font-size: 1.2rem;">Poppinuts</span>
-  </a>
-  <button class="menu-toggle" id="menuToggle">
-    <i class="fas fa-bars"></i>
-  </button>
+<!-- Main Header -->
+<header class="main-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="assets/logo/makana logo.png" alt="Poppinuts Logo">
+      <span class="logo-text">Poppinuts</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="products.html">Collection</a></li>
+      <li><a href="index.html#nutrition">Wellness</a></li>
+    </ul>
+
+    <div class="header-socials">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
 </header>
 
-<!-- Sidebar -->
+<!-- Mobile Sidebar -->
 <aside class="sidebar" id="sidebar">
-  <a href="index.html" class="logo">
-    <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 60px; width: auto; display: block;">
-    <span class="logo-text">Poppinuts</span>
-  </a>
   <ul class="nav-links">
     <li><a href="index.html#home">Home</a></li>
     <li><a href="about.html">About Us</a></li>
@@ -22,11 +35,12 @@
     <li><a href="products.html">Collection</a></li>
     <li><a href="index.html#nutrition">Wellness</a></li>
   </ul>
+  
   <div class="sidebar-footer">
-    <div class="social-icons" style="margin-left: 0; display: flex; gap: 15px;">
-      <a href="#" style="margin-left: 0;"><i class="fab fa-instagram"></i></a>
-      <a href="#" style="margin-left: 0;"><i class="fab fa-pinterest"></i></a>
-      <a href="#" style="margin-left: 0;"><i class="fab fa-facebook-f"></i></a>
+    <div class="social-icons" style="display: flex; gap: 20px;">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
     </div>
   </div>
 </aside>

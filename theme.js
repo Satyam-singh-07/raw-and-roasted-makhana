@@ -6,22 +6,38 @@ const config = {
   businessName: 'Poppinuts',
   theme: {
     default: {
-      '--primary': '#D4AF37',
-      '--secondary': '#26143A',
-      '--accent': '#E5C158',
-      '--dark': '#F5F5F5',
-      '--light': '#1A0B2E',
-      '--surface': '#2D1B46',
-      '--border': '#422665'
+      '--primary': '#2a0a42',
+      '--primary-deep': '#150020',
+      '--secondary': '#b87318',
+      '--accent': '#d7a638',
+      '--accent-soft': '#f3d17a',
+      '--background': '#fff8ec',
+      '--background-alt': '#f8ebd5',
+      '--surface': '#fffdf8',
+      '--surface-tint': '#fbefd9',
+      '--text': '#1b1420',
+      '--text-muted': '#6d5c6f',
+      '--border': 'rgba(184, 115, 24, 0.34)',
+      '--hover': '#41105f',
+      '--dark': '#1b1420',
+      '--light': '#fff8ec'
     },
     purple: {
-      '--primary': '#D4AF37',
-      '--secondary': '#26143A',
-      '--accent': '#E5C158',
-      '--dark': '#F5F5F5',
-      '--light': '#1A0B2E',
-      '--surface': '#2D1B46',
-      '--border': '#422665'
+      '--primary': '#2a0a42',
+      '--primary-deep': '#150020',
+      '--secondary': '#b87318',
+      '--accent': '#d7a638',
+      '--accent-soft': '#f3d17a',
+      '--background': '#fff8ec',
+      '--background-alt': '#f8ebd5',
+      '--surface': '#fffdf8',
+      '--surface-tint': '#fbefd9',
+      '--text': '#1b1420',
+      '--text-muted': '#6d5c6f',
+      '--border': 'rgba(184, 115, 24, 0.34)',
+      '--hover': '#41105f',
+      '--dark': '#1b1420',
+      '--light': '#fff8ec'
     }
   }
 };
