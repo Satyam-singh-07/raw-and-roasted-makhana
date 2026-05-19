@@ -1,6 +1,6 @@
 :root {
-  --primary: #2a0a42;
-  --primary-deep: #150020;
+  --primary: #520d87;
+  --primary-deep: #4e0973;
   --secondary: #b87318;
   --accent: #d7a638;
   --accent-soft: #f3d17a;
@@ -11,8 +11,8 @@
   --text: #1b1420;
   --text-muted: #6d5c6f;
   --border: rgba(184, 115, 24, 0.34);
-  --hover: #41105f;
-  --shadow: 0 24px 70px rgba(42, 10, 66, 0.14);
+  --hover: #5d138b;
+  --shadow: 0 24px 70px rgba(97, 16, 159, 0.14);
   --gold-shadow: 0 14px 34px rgba(184, 115, 24, 0.22);
   --radius: 22px;
 
@@ -100,12 +100,88 @@ h2 span,
   color: var(--secondary) !important;
 }
 
+.nutri-highlight {
+  display: inline;
+  color: var(--secondary);
+  font-weight: 900;
+  background: linear-gradient(180deg, transparent 58%, rgba(215, 166, 56, 0.28) 58%);
+  padding: 0 0.08em;
+}
+
+.nutri-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border: 1px solid rgba(184, 115, 24, 0.34);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: var(--primary);
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: 0 10px 22px rgba(42, 10, 66, 0.08);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nutri-pill i {
+  color: var(--secondary);
+}
+
+.nutri-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero .nutri-proof-row {
+  margin-bottom: 34px;
+}
+
+.tag-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 28px 0 8px;
+  padding: 14px 0;
+  border-block: 1px solid rgba(184, 115, 24, 0.22);
+  background: rgba(255, 253, 248, 0.58);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+}
+
+.tag-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  animation: tagMarquee 28s linear infinite;
+}
+
+.tag-marquee:hover .tag-marquee-track {
+  animation-play-state: paused;
+}
+
+.tag-marquee .nutri-pill {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  background: rgba(255, 248, 236, 0.92);
+}
+
+@keyframes tagMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 img {
   max-width: 100%;
 }
 
 .main-content {
-  margin-top: 88px;
+  margin-top: 106px;
   transition: margin 0.3s ease;
 }
 
@@ -191,17 +267,29 @@ textarea:focus-visible {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: var(--primary) !important;
-  font-size: 1.65rem;
+  font-size: 1.95rem;
   font-weight: 800;
   text-decoration: none;
+  padding: 6px 16px 6px 8px;
+  border: 1px solid rgba(215, 166, 56, 0.38);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 24px 22px, rgba(215, 166, 56, 0.22), transparent 38px),
+    rgba(255, 253, 248, 0.72);
+  box-shadow: 0 12px 30px rgba(42, 10, 66, 0.1);
 }
 
 .logo img {
   width: auto;
-  height: 48px;
-  filter: drop-shadow(0 8px 18px rgba(42, 10, 66, 0.12));
+  height: 64px;
+  border-radius: 50%;
+  filter: drop-shadow(0 10px 18px rgba(42, 10, 66, 0.18)) drop-shadow(0 0 12px rgba(215, 166, 56, 0.34));
+}
+
+.logo-text {
+  text-shadow: 0 2px 0 rgba(255, 248, 236, 0.86), 0 8px 18px rgba(184, 115, 24, 0.2);
 }
 
 .nav-links {
@@ -708,6 +796,17 @@ footer .logo-text {
   color: #fff8ec !important;
 }
 
+footer .logo {
+  width: fit-content;
+  padding: 8px;
+  border-color: rgba(215, 166, 56, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+footer .logo img {
+  height: 72px !important;
+}
+
 footer p {
   opacity: 0.84;
 }
@@ -792,7 +891,7 @@ footer .social-icons a:hover {
   }
 
   .main-content {
-    margin-top: 76px;
+    margin-top: 92px;
   }
 
   .story-section,
@@ -815,11 +914,13 @@ footer .social-icons a:hover {
   }
 
   .logo {
-    font-size: 1.35rem;
+    gap: 10px;
+    font-size: 1.45rem;
+    padding: 5px 12px 5px 6px;
   }
 
   .logo img {
-    height: 42px;
+    height: 52px;
   }
 
   .hero,

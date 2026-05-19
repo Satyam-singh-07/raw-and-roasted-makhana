@@ -6,8 +6,8 @@ const config = {
   businessName: 'Poppinuts',
   theme: {
     default: {
-      '--primary': '#2a0a42',
-      '--primary-deep': '#150020',
+      '--primary': '#520d87',
+      '--primary-deep': '#4e0973',
       '--secondary': '#b87318',
       '--accent': '#d7a638',
       '--accent-soft': '#f3d17a',
@@ -18,13 +18,13 @@ const config = {
       '--text': '#1b1420',
       '--text-muted': '#6d5c6f',
       '--border': 'rgba(184, 115, 24, 0.34)',
-      '--hover': '#41105f',
+      '--hover': '#5d138b',
       '--dark': '#1b1420',
       '--light': '#fff8ec'
     },
     purple: {
-      '--primary': '#2a0a42',
-      '--primary-deep': '#150020',
+      '--primary': '#520d87',
+      '--primary-deep': '#4e0973',
       '--secondary': '#b87318',
       '--accent': '#d7a638',
       '--accent-soft': '#f3d17a',
@@ -35,7 +35,7 @@ const config = {
       '--text': '#1b1420',
       '--text-muted': '#6d5c6f',
       '--border': 'rgba(184, 115, 24, 0.34)',
-      '--hover': '#41105f',
+      '--hover': '#5d138b',
       '--dark': '#1b1420',
       '--light': '#fff8ec'
     }

@@ -164,6 +164,36 @@
         margin-top: 50px;
       }
 
+      .product-category-block {
+        margin-top: 46px;
+      }
+
+      .product-category-head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .product-category-head h3 {
+        font-size: 2rem;
+        color: var(--primary);
+      }
+
+      .product-category-head p {
+        color: var(--text-muted);
+        margin-top: 6px;
+      }
+
+      .product-category-note {
+        color: var(--secondary);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
       .product-item {
         background: var(--surface);
         border-radius: 24px;
@@ -186,16 +216,33 @@
 
       .product-raw-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg"); }
       .product-roasted-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM.jpeg"); }
+      .product-jaggery-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (1).jpeg"); }
+      .product-sesame-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (2).jpeg"); }
+      .product-peri-peri-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.26 PM.jpeg"); }
+      .product-cheese-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.27 PM.jpeg"); }
+      .product-salt-pepper-img { background-image: url("assets/products/WhatsApp Image 2026-04-24 at 1.31.29 PM.jpeg"); }
 
       .product-info {
         padding: 24px;
       }
 
-      .product-price {
-        font-size: 1.25rem;
-        font-weight: 700;
+      .product-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 18px 0 22px;
+      }
+
+      .product-meta span {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(215, 166, 56, 0.12);
         color: var(--primary);
-        margin: 10px 0;
+        padding: 7px 12px;
+        font-size: 0.78rem;
+        font-weight: 800;
       }
 
       /* Benefits */
@@ -373,7 +420,7 @@
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="products.html">Collection</a></li>
-          <li><a href="index.html#nutrition">Wellness</a></li>
+          <li><a href="index.html#nutrition">Superfood</a></li>
         </ul>
 
         <div class="header-socials">
@@ -395,7 +442,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="products.html">Collection</a></li>
-        <li><a href="index.html#nutrition">Wellness</a></li>
+        <li><a href="index.html#nutrition">Superfood</a></li>
       </ul>
       
       <div class="sidebar-footer">
@@ -412,17 +459,43 @@
       <div class="container" id="home">
         <div class="hero">
           <div class="hero-content">
-            <div class="hero-badge">The Future of Snacking</div>
+            <div class="hero-badge">Protein-Rich • Superfood Snacking</div>
             <h1>
-              The Art of <span class="business-name">Poppinuts</span><br /><span>Pure Crunch</span>
+              The Art of <span class="business-name">Poppinuts</span><br /><span>Protein-Rich Pure Crunch</span>
             </h1>
             <p class="hero-description">
               Experience the crunch of artisanal air-popped water lily seeds. 
-              Pure, oil-free, and packed with superfood nutrition.
+              Pure, oil-free, and packed with <span class="nutri-highlight">superfood nutrition</span> and plant-based protein.
             </p>
+            <div class="nutri-proof-row" aria-label="Nutrition highlights">
+              <span class="nutri-pill"><i class="fas fa-seedling"></i> Plant Protein</span>
+              <span class="nutri-pill"><i class="fas fa-leaf"></i> Superfood Seeds</span>
+              <span class="nutri-pill"><i class="fas fa-ban"></i> Gluten-Free</span>
+            </div>
             <a href="#products" class="btn" style="padding: 20px 45px; font-size: 1.1rem;">
               Explore Collection <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
             </a>
+          </div>
+        </div>
+
+        <div class="tag-marquee" aria-label="Poppinuts nutrition highlights">
+          <div class="tag-marquee-track">
+            <span class="nutri-pill"><i class="fas fa-seedling"></i> Plant Protein</span>
+            <span class="nutri-pill"><i class="fas fa-leaf"></i> Superfood Seeds</span>
+            <span class="nutri-pill"><i class="fas fa-dumbbell"></i> Fitness Snack</span>
+            <span class="nutri-pill"><i class="fas fa-ban"></i> Gluten-Free</span>
+            <span class="nutri-pill"><i class="fas fa-fire"></i> Low Calorie</span>
+            <span class="nutri-pill"><i class="fas fa-heart"></i> Heart Friendly</span>
+            <span class="nutri-pill"><i class="fas fa-check-circle"></i> No Preservatives</span>
+            <span class="nutri-pill"><i class="fas fa-globe"></i> Export Quality</span>
+            <span class="nutri-pill"><i class="fas fa-seedling"></i> Plant Protein</span>
+            <span class="nutri-pill"><i class="fas fa-leaf"></i> Superfood Seeds</span>
+            <span class="nutri-pill"><i class="fas fa-dumbbell"></i> Fitness Snack</span>
+            <span class="nutri-pill"><i class="fas fa-ban"></i> Gluten-Free</span>
+            <span class="nutri-pill"><i class="fas fa-fire"></i> Low Calorie</span>
+            <span class="nutri-pill"><i class="fas fa-heart"></i> Heart Friendly</span>
+            <span class="nutri-pill"><i class="fas fa-check-circle"></i> No Preservatives</span>
+            <span class="nutri-pill"><i class="fas fa-globe"></i> Export Quality</span>
           </div>
         </div>
       </div>
@@ -430,16 +503,16 @@
       <!-- 2. CATEGORIES -->
       <div class="container">
         <div class="categories">
-          <h2 style="text-align: center;">Our Product Categories</h2>
-          <p style="text-align: center; color: var(--accent); margin-bottom: 40px;">From pure seeds to artisanal roasted makhana.</p>
+          <h2 style="text-align: center;">Our <span class="nutri-highlight">Protein-Rich</span> & <span class="nutri-highlight">Superfood</span> Categories</h2>
+          <p style="text-align: center; color: var(--accent); margin-bottom: 40px;">From pure protein-rich seeds to artisanal roasted makhana.</p>
           <div class="category-grid">
             <a href="products.html" class="category-tile">
               <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.23 PM.jpeg" alt="Raw">
-              <h3>Premium Air-Popped Seeds (Raw)</h3>
+            <h3>Premium Protein Seeds (Raw)</h3>
             </a>
             <a href="products.html" class="category-tile">
               <img src="assets/products/WhatsApp Image 2026-04-24 at 1.31.24 PM (1).jpeg" alt="Roasted">
-              <h3>Roasted Water Lily Seeds</h3>
+            <h3>Roasted Superfood Makhana</h3>
             </a>
           </div>
         </div>
@@ -450,31 +523,117 @@
         <div class="product-showcase">
           <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;">
             <div>
-              <h2>Featured Products</h2>
-              <p class="section-subhead">Our best-sellers, hand-picked for you.</p>
+              <h2>Featured <span class="nutri-highlight">Protein-Rich</span> Snacks & <span class="nutri-highlight">Superfoods</span></h2>
+              <p class="section-subhead">Explore raw makhana grades and roasted makhana flavors built around protein, clean crunch, and superfood nutrition.</p>
             </div>
             <a href="products.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">View All →</a>
           </div>
           
-          <div class="product-grid">
-            <!-- Product 1 -->
-            <div class="product-item">
-              <div class="product-image product-roasted-img"></div>
-              <div class="product-info">
-                <div class="product-tag">Best Seller</div>
-                <h3 style="margin: 10px 0;">Classic Himalayan Salt</h3>
-                <p class="product-price">₹199</p>
-                <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+          <div class="product-category-block">
+            <div class="product-category-head">
+              <div>
+                <h3>Raw Makhana</h3>
+                <p>Premium unseasoned water lily seeds with natural protein, fiber, and clean superfood value.</p>
+              </div>
+              <span class="product-category-note">Sub Categories</span>
+            </div>
+
+            <div class="product-grid">
+              <div class="product-item">
+                <div class="product-image product-raw-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Raw Range</div>
+                  <h3 style="margin: 10px 0;">Premium Raw Protein Seeds</h3>
+                  <div class="product-meta" aria-label="Raw makhana subcategories">
+                    <span>Jumbo Grade</span>
+                    <span>Protein-Rich Whole</span>
+                    <span>Export Bulk</span>
+                    <span>Roasting Grade</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
               </div>
             </div>
-            <!-- Product 2 -->
-            <div class="product-item">
-              <div class="product-image product-raw-img"></div>
-              <div class="product-info">
-                <div class="product-tag">Premium Quality</div>
-                <h3 style="margin: 10px 0;">Raw Jumbo Makhana</h3>
-                <p class="product-price">₹175</p>
-                <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+          </div>
+
+          <div class="product-category-block">
+            <div class="product-category-head">
+              <div>
+                <h3>Roasted Makhana</h3>
+                <p>Ready-to-eat roasted makhana in five signature Poppinuts flavors with a light, protein-rich crunch.</p>
+              </div>
+              <span class="product-category-note">5 Flavours</span>
+            </div>
+
+            <div class="product-grid">
+              <!-- Roasted Flavor 1 -->
+              <div class="product-item">
+                <div class="product-image product-jaggery-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Roasted Flavor</div>
+                  <h3 style="margin: 10px 0;">Jaggery Caramel</h3>
+                  <div class="product-meta" aria-label="Jaggery caramel attributes">
+                    <span>Naturally Sweet</span>
+                    <span>Crunchy</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
+              </div>
+
+              <!-- Roasted Flavor 2 -->
+              <div class="product-item">
+                <div class="product-image product-sesame-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Roasted Flavor</div>
+                  <h3 style="margin: 10px 0;">Sesame</h3>
+                  <div class="product-meta" aria-label="Sesame attributes">
+                    <span>Nutty</span>
+                    <span>Lightly Roasted</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
+              </div>
+
+              <!-- Roasted Flavor 3 -->
+              <div class="product-item">
+                <div class="product-image product-peri-peri-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Roasted Flavor</div>
+                  <h3 style="margin: 10px 0;">Peri Peri</h3>
+                  <div class="product-meta" aria-label="Peri peri attributes">
+                    <span>Bold & Spicy</span>
+                    <span>Export Pack</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
+              </div>
+
+              <!-- Roasted Flavor 4 -->
+              <div class="product-item">
+                <div class="product-image product-cheese-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Roasted Flavor</div>
+                  <h3 style="margin: 10px 0;">Cheese Cream & Onion</h3>
+                  <div class="product-meta" aria-label="Cheese cream and onion attributes">
+                    <span>Rich & Creamy</span>
+                    <span>Ready-to-Eat</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
+              </div>
+
+              <!-- Roasted Flavor 5 -->
+              <div class="product-item">
+                <div class="product-image product-salt-pepper-img"></div>
+                <div class="product-info">
+                  <div class="product-tag">Roasted Flavor</div>
+                  <h3 style="margin: 10px 0;">Salt & Pepper</h3>
+                  <div class="product-meta" aria-label="Salt and pepper attributes">
+                    <span>Classic Savory</span>
+                    <span>Gluten-Free</span>
+                  </div>
+                  <a href="products.html" class="btn" style="width: 100%; border-radius: 12px; padding: 12px; text-decoration: none;">View Details</a>
+                </div>
               </div>
             </div>
           </div>
@@ -485,10 +644,10 @@
       <div class="container" id="nutrition">
         <div class="benefits">
           <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <div class="hero-badge">Superfood Profile</div>
-            <h2 style="color: var(--dark); margin-top: 15px;">Why Water Lily Seeds Are a Superfood</h2>
+            <div class="hero-badge">Protein Profile • Superfood Benefits</div>
+            <h2 style="color: var(--dark); margin-top: 15px;">Why Water Lily Seeds Offer <span class="nutri-highlight">Protein</span> & <span class="nutri-highlight">Superfood</span> Benefits</h2>
             <p style="color: var(--dark); opacity: 0.8; margin-top: 15px; font-size: 1.1rem;">
-              Air-popped water lily seeds are a time-honored superfood, valued for their protein density, easy digestibility, and clean nutritional balance.
+              Air-popped water lily seeds are a time-honored <span class="nutri-highlight">superfood</span>, valued for protein density, easy digestibility, and clean nutritional balance.
             </p>
           </div>
           <div class="benefits-grid">
@@ -531,7 +690,7 @@
         <section class="gallery-slider-section">
           <div style="text-align: center; margin-bottom: 60px;">
             <h2 style="margin-bottom: 10px;">Glimpses of Purity</h2>
-            <p class="section-subhead" style="margin: 0 auto;">A look at our premium seeds and the care that goes into every pack.</p>
+            <p class="section-subhead" style="margin: 0 auto;">A look at our premium protein-rich seeds and the care that goes into every superfood pack.</p>
           </div>
           
           <div class="slider-container">
@@ -568,12 +727,12 @@
             <img src="assets/brocer images/ChatGPT Image Apr 22, 2026, 11_13_33 AM.png" alt="Makhana Heritage">
           </div>
           <div class="story-content">
-            <div class="hero-badge" style="background: var(--accent); color: white;">Our Heritage</div>
+            <div class="hero-badge" style="background: var(--accent); color: white;">Protein Heritage • Superfood Story</div>
             <h2 style="margin: 20px 0;">About Poppinuts</h2>
             <p style="font-size: 1.1rem; line-height: 1.8; color: var(--dark); opacity: 0.9;">
-              Poppinuts is a premium healthy snacking brand made from air-popped water lily seeds, also known globally as lotus seeds or makhana. Celebrated for their high protein content and light texture, our seeds are a true superfood.
+              Poppinuts is a premium healthy snacking brand made from air-popped water lily seeds, also known globally as lotus seeds or makhana. Celebrated for their <span class="nutri-highlight">high protein content</span> and light texture, our seeds are a true <span class="nutri-highlight">superfood</span>.
               <br><br>
-              As a flagship brand of Shree Lotus Exports Pvt. Ltd., we are committed to superfood nutrition, purity, and premium quality. Our seeds are carefully sourced, air-popped without oil, and rigorously quality-checked.
+              As a flagship brand of Shree Lotus Exports Pvt. Ltd., we are committed to <span class="nutri-highlight">superfood nutrition</span>, purity, and premium quality. Our seeds are carefully sourced, air-popped without oil, and rigorously quality-checked.
             </p>
             <a href="about.html" class="btn-outline" style="margin-top: 30px; padding: 15px 35px; border-radius: 12px;">Learn More</a>
           </div>
@@ -597,7 +756,7 @@
             <img src="assets/logo/makana logo.png" alt="Poppinuts Logo" style="height: 50px; width: auto; display: block;">
           </a>
           <p>
-            © 2025 · <span class="business-name"></span><br />Ethically sourced from family farms
+            © 2025 · <span class="business-name"></span><br />Protein-rich superfoods from family farms
           </p>
           <div style="margin-top: 16px;">
             <a href="privacy-policy.html" style="color: var(--dark); text-decoration: none; margin-right: 16px;">Privacy Policy</a>
